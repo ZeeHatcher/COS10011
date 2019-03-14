@@ -1,61 +1,6 @@
 /* Colors
-#fffAfA
-#2f2f2f
 #1c1c1c
-#dcf3ff
-#a2d2df
-#396d7c
+#383838
+#ffffff
+#b6e2ff
 */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-body {
-  background-color: #2f2f2f;
-  color: #fffafa;
-  font-family: "Open Sans", sans-serif;
-}
-
-.logo {
-  text-align: center;
-}
-
-.navbar {
-  position: sticky;
-  background-color: #2f2f2f;
-  padding: 10px;
-  top: 0;
-}
-
-.navbar ul {
-  display: flex;
-  margin: auto;
-  width: 50%;
-  justify-content: space-around;
-  border-bottom: solid 2px #a2d2df;
-}
-
-.navbar li {
-  padding: 15px;
-  list-style: none;
-}
-
-footer {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  background-color: #1c1c1c;
-}
-
-footer section {
-  float: left;
-  width: 50%;
-}

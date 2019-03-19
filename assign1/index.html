@@ -14,28 +14,26 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <header>
-    <img class="logo" src="images/company_logo.png" alt="Company Logo">
+  <header class="header">
+    <img class="header__logo" src="images/company_logo.png" alt="Company Logo">
   </header>
 
   <nav class="navbar">
-    <div class="navbar__logo">
-      <a href="index.html">
-        <h2>COMPANY</h2>
-      </a>
-    </div>
+    <a class="navbar__logo" href="index.html">
+      <h2>COMPANY</h2>
+    </a>
 
     <ul class="navbar__links">
-      <li>
+      <li class="navbar__link navbar__link--dropdown">
         <h3>Products</h3>
-        <ul class="navbar__sub">
-          <li><a href=""><h3>Snowboards</h3></a></li>
-          <li><a href=""><h3>Skis</h3></a></li>
-          <li><a href=""><h3>Camping Gear</h3></a></li>
+        <ul class="navbar__dropdown">
+          <li class="navbar__dropdown-link navbar__link--on-hover"><a href=""><h3>Snowboards</h3></a></li>
+          <li class="navbar__dropdown-link navbar__link--on-hover"><a href=""><h3>Skis</h3></a></li>
+          <li class="navbar__dropdown-link navbar__link--on-hover"><a href=""><h3>Camping Gear</h3></a></li>
         </ul>
       </li>
-      <li><a href=""><h3>About Us</h3></a></li>
-      <li><a href=""><h3>Rent</h3></a></li>
+      <li class="navbar__link navbar__link--on-hover"><a href=""><h3>About Us</h3></a></li>
+      <li class="navbar__link navbar__link--on-hover"><a href=""><h3>Rent</h3></a></li>
     </ul>
   </nav>
 
@@ -104,9 +102,9 @@
       </ul>
     </section>
 
-    <div class="btn-backtotop">
-      <svg width="100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 136.18 68.09"><defs><style>.btn-backtotop{fill:#b6e2ff;}</style></defs><polygon class="cls-1" points="136.18 68.09 0 68.09 68.09 0 136.18 68.09"/><text><h3>Top</h3></text></g></g></svg>
-    </div>
+    <a href="#" class="btn-backtotop">
+      Back To Top
+    </a>
   </footer>
 </body>
 </html>

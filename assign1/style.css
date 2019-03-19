@@ -7,21 +7,21 @@
 */
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 a {
-  text-decoration: none;
   color: #ffffff;
+  text-decoration: none;
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
   background-color: #1c1c1c;
   color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -32,37 +32,39 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2em;
-  letter-spacing: 10px;
+  letter-spacing: 0.5em;
 }
 
 h2 {
   font-size: 1.5em;
-  letter-spacing: 10px;
+  letter-spacing: 0.5em;
 }
 
 h3 {
   font-size: 1em;
-  letter-spacing: 6px;
+  letter-spacing: 0.25em;
 }
 
-header {
+.header {
   height: 150px;
-  width: 100%;
   position: relative;
+  width: 100%;
+}
+
+.header__logo {
+  height: 75%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 footer {
-  height: 300px;
-  width: 100%;
   background-color: #111111;
   display: flex;
+  height: 300px;
   position: relative;
-}
-
-button {
-  background-color: inherit;
-  border: none;
-  cursor: pointer;
+  width: 100%;
 }
 
 .footer__links {
@@ -91,73 +93,84 @@ li {
   list-style: none;
 }
 
-.logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 75%;
-}
-
 section {
   margin: 50px 0;
 }
 
 .navbar {
+  background-color: #111111;
   position: sticky;
   top: 0;
-  background-color: #111111;
   z-index: 10;
 }
 
-.navbar > * {
-  display: inline-block;
-}
-
 .navbar__logo {
+  display: inline-block;
   background-color: #b6e2ff;
-  width: 300px;
-  text-align: center;
   padding: 21px;
-}
-
-.navbar__logo h2 {
+  text-align: center;
+  width: 300px;
   color: #111111;
 }
 
 .navbar__links{
+  display: inline-block;
   float: right;
   padding: 25px;
 }
 
-.navbar__links li {
+.navbar__link {
   display: inline-block;
   list-style: none;
   margin: 0 25px;
 }
 
-.navbar__sub {
+.navbar__link--dropdown {
+  position: relative;
+}
+
+.navbar__dropdown {
   display: none;
+  position: absolute;
+  left: -25px;
+  background-color: #111111;
+  border-bottom: solid 2px #b6e2ff;
+}
+
+.navbar__dropdown-link {
+  margin: 25px;
+}
+
+.navbar__link--dropdown:hover .navbar__dropdown {
+  display: block;
+}
+
+.navbar__link--on-hover {
+  transition: 0.2s;
+}
+
+.navbar__link--on-hover:hover {
+  color: #b6e3ff;
 }
 
 .hero {
-  width: 100%;
-  margin: 25px 0;
   height: 60vh;
+  margin: 25px 0;
+  width: 100%;
 }
 
 .hero div {
-  width: 45%;
-  height: 100%;
-  padding: 50px;
   background-color: #111111;
   float: left;
+  height: 100%;
+  padding: 50px;
+  width: 45%;
 }
 
 .hero img {
-  width: 55%;
   height: 100%;
   object-fit: cover;
+  width: 55%;
 }
 
 .hero p {
@@ -165,48 +178,48 @@ section {
 }
 
 .seperator {
-  text-align: center;
   background-color: #111111;
+  text-align: center;
 }
 
 .title {
-  text-align: center;
-  display: inline;
-  padding-right: 25px;
-  padding-left: 35px;
+  background-color: #1c1c1c;
   border-left: solid 5px #b6e2ff;
   border-right: solid 5px #b6e2ff;
-  background-color: #1c1c1c;
+  display: inline;
+  padding-left: 35px;
+  padding-right: 25px;
+  text-align: center;
 }
 
 .cards {
-  margin: 50px 0;
   display: flex;
   justify-content: space-evenly;
+  margin: 50px 0;
 }
 
 .card {
-  width: 20%;
   border: solid 2px #111111;
   height: 500px;
+  width: 20%;
 }
 
 .card__name {
-  opacity: 0;
-  position: relative;
+  background-color: #111111;
   display: block;
   height: 100%;
+  opacity: 0;
+  position: relative;
   text-align: center;
-  background-color: #111111;
   transition: 0.2s opacity;
 }
 
 .card__name h1 {
+  display: inline;
+  left: 50%;
   position: absolute;
   top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%);
-  display: inline;
 }
 
 .card:hover .card__name {
@@ -214,5 +227,18 @@ section {
 }
 
 .btn-backtotop {
-  cursor: pointer;
+  border: solid 2px #b6e2ff;
+  bottom: 25px;
+  color: #b6e2ff;
+  display: block;
+  left: 50%;
+  padding: 5px 20px;
+  position: absolute;
+  transform: translate(-50%, 0);
+  transition: 0.2s;
+}
+
+.btn-backtotop:hover {
+  background-color: #b6e2ff;
+  color: #111111;
 }

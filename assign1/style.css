@@ -6,6 +6,35 @@
 #b6e2ff
 */
 
+/* **************************************************
+    Utility CSS
+   ************************************************** */
+.is-pos-x-center {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.is-pos-y-center {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.is-pos-x-y-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-accent {
+  color: #b6e2ff;
+}
+
+/* **************************************************
+    Global CSS
+   ************************************************** */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -53,104 +82,221 @@ section {
   margin: 50px 0;
 }
 
+/* **************************************************
+    Header, Navbar, Footer, Disclaimer CSS
+   ************************************************** */
+.disclaimer {
+  border: solid 2px #b6e2ff;
+  padding: 25px;
+  text-align: center;
+  margin: 25px auto;
+  width: 400px;
+}
+
+.disclaimer--long {
+  width: 70%;
+  margin-top: 150px;
+}
+
+.disclaimer__title {
+  color: #b6e2ff;
+}
+
+.disclaimer__p {
+  margin-top: 25px;
+}
+
+.disclaimer__btn {
+  /* bottom: 50px; */
+}
+
+.footer {
+ background-color: #111111;
+ display: flex;
+ height: 300px;
+ position: relative;
+ width: 100%;
+}
+
+.footer__column {
+ margin: 50px 50px;
+}
+
+.footer__title {
+ color: #b6e2ff;
+}
+
+.footer__link {
+ opacity: 0.2;
+ transition: 0.2s opacity;
+ margin-top: 5px;
+}
+
+.footer__bullet::before {
+ content: "|";
+ margin-right: 0.5em;
+}
+
+.footer__link:hover {
+ opacity: 0.6;
+}
+
+.footer__btn {
+  bottom: 25px;
+}
+
+.footer__logo {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  opacity: 0.2;
+}
+
 .header {
-  height: 150px;
-  position: relative;
-  width: 100%;
+ height: 150px;
+ position: relative;
+ width: 100%;
 }
 
 .header__logo {
-  height: 75%;
+ height: 50%;
+ left: 50%;
+ position: absolute;
+ top: 50%;
+ transform: translate(-50%, -50%);
+}
+
+.navbar {
+ background-color: #111111;
+ position: sticky;
+ top: 0;
+ z-index: 10;
+}
+
+.navbar__logo {
+ display: inline-block;
+ background-color: #b6e2ff;
+ padding: 21px;
+ text-align: center;
+ width: 300px;
+ color: #111111;
+}
+
+.navbar__links{
+ display: inline-block;
+ float: right;
+ padding: 25px;
+}
+
+.navbar__link {
+ display: inline-block;
+ list-style: none;
+ margin: 0 25px;
+}
+
+.navbar__link--dropdown {
+ position: relative;
+}
+
+.navbar__dropdown {
+ display: none;
+ position: absolute;
+ left: -25px;
+ background-color: #111111;
+ border-bottom: solid 2px #b6e2ff;
+}
+
+.navbar__dropdown-title {
+  transition: 0.2s;
+}
+
+.navbar__dropdown-link {
+ margin: 25px;
+}
+
+.navbar__link--dropdown:hover .navbar__dropdown {
+ display: block;
+}
+
+.navbar__link--dropdown:hover .navbar__dropdown-title {
+  color: #b6e2ff;
+}
+
+.navbar__link--on-hover {
+ transition: 0.2s;
+}
+
+.navbar__link--on-hover:hover {
+ color: #b6e3ff;
+}
+
+/* **************************************************
+    Others
+   ************************************************** */
+
+.btn {
+  border: solid 2px #ffffff;
+  color: #ffffff;
+  display: block;
+  padding: 5px 20px;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+  color: #111111;
+}
+
+.card {
+  display: block;
+  border: solid 2px #111111;
+  width: 20%;
+  height: 500px;
+  position: relative;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.card--bg-snowboard {
+  background-image: url("images/snowboard1.jpg");
+  background-size: cover;
+  background-position: 20%;
+}
+
+.card--bg-ski {
+  background-image: url();
+}
+
+.card--bg-camp {
+  background-image: url();
+}
+
+[class*="card--bg"] {
+  background-repeat: no-repeat;
+}
+
+.card__title {
+  opacity: 0;
   left: 50%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-
-.footer {
-  background-color: #111111;
-  display: flex;
-  height: 300px;
-  position: relative;
-  width: 100%;
-}
-
-.footer__column {
-  margin: 50px 50px;
-}
-
-.footer__title {
-  color: #b6e2ff;
-}
-
-.footer__link {
-  opacity: 0.2;
-  transition: 0.2s opacity;
-}
-
-.footer__bullet::before {
-  content: "|";
-  margin-right: 0.5em;
-}
-
-.footer__link:hover {
-  opacity: 0.6;
-}
-
-.navbar {
-  background-color: #111111;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.navbar__logo {
-  display: inline-block;
-  background-color: #b6e2ff;
-  padding: 21px;
-  text-align: center;
-  width: 300px;
-  color: #111111;
-}
-
-.navbar__links{
-  display: inline-block;
-  float: right;
-  padding: 25px;
-}
-
-.navbar__link {
-  display: inline-block;
-  list-style: none;
-  margin: 0 25px;
-}
-
-.navbar__link--dropdown {
-  position: relative;
-}
-
-.navbar__dropdown {
-  display: none;
-  position: absolute;
-  left: -25px;
-  background-color: #111111;
-  border-bottom: solid 2px #b6e2ff;
-}
-
-.navbar__dropdown-link {
-  margin: 25px;
-}
-
-.navbar__link--dropdown:hover .navbar__dropdown {
-  display: block;
-}
-
-.navbar__link--on-hover {
   transition: 0.2s;
 }
 
-.navbar__link--on-hover:hover {
-  color: #b6e3ff;
+[class*="card--bg"]:hover {
+  background-color: #111111;
+  background-image: none;
+}
+
+.card:hover .card__title {
+  opacity: 0.9;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 50px 0;
 }
 
 .hero {
@@ -177,6 +323,20 @@ section {
   margin-top: 25px;
 }
 
+.info {
+  text-align: center;
+  margin: 50px;
+}
+
+.link-underline {
+  text-decoration: underline;
+  transition: 0.2s;
+}
+
+.link-underline:hover {
+  color: #b6e2ff;
+}
+
 .seperator {
   background-color: #111111;
   text-align: center;
@@ -190,59 +350,4 @@ section {
   padding-left: 35px;
   padding-right: 25px;
   text-align: center;
-}
-
-.cards {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 50px 0;
-}
-
-.card {
-  display: block;
-  border: solid 2px #111111;
-  width: 20%;
-  height: 500px;
-  position: relative;
-  text-align: center;
-  transition: 0.2s;
-}
-
-.card__title {
-  opacity: 0;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transition: 0.2s;
-}
-
-.card:hover {
-  background-color: #111111;
-}
-
-.card:hover .card__title {
-  opacity: 0.9;
-}
-
-.btn-backtotop {
-  border: solid 2px #ffffff;
-  bottom: 25px;
-  color: #ffffff;
-  display: block;
-  left: 50%;
-  padding: 5px 20px;
-  position: absolute;
-  transform: translate(-50%, 0);
-  transition: 0.2s;
-}
-
-.btn-backtotop:hover {
-  background-color: #ffffff;
-  color: #111111;
-}
-
-.info {
-  text-align: center;
-  margin: 50px;
 }

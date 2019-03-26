@@ -22,7 +22,7 @@
 
   <nav class="navbar">
     <a class="navbar__logo" href="index.html">
-      <h2>GLACIER</h2>
+      <h2>GLACIE<span class="no-letter-spacing">R</span></h2>
     </a>
 
     <ul class="navbar__links">
@@ -42,7 +42,7 @@
   <main>
     <form action="">
       <fieldset>
-        <legend><h3>Personal Information</h3></legend>
+        <legend><h3>Personal Informatio<span class="no-letter-spacing">n</span></h3></legend>
 
         <table class="form__table">
           <tr>
@@ -69,7 +69,7 @@
               <label for="tele">Telephone Number: </label>
             </td>
             <td class="form__input">
-              <input id="tele" name="tele_front" type="text" maxlength="3" size="3" placeholder="012" pattern="^d+$" required/>
+              <input id="tele" name="tele_front" type="text" maxlength="3" size="1" placeholder="012" pattern="^d+$" required/>
               -
               <input name="tele_back" type="text" maxlength="7" size="7" placeholder="3456789" pattern="^d+$" required>
             </td>
@@ -78,7 +78,7 @@
       </fieldset>
 
       <fieldset>
-        <legend><h3>Address</h3></legend>
+        <legend><h3>Addres<span class="no-letter-spacing">s</span></h3></legend>
 
         <table class="form__table">
           <tr>
@@ -143,7 +143,7 @@
       </fieldset>
 
       <fieldset>
-        <legend><h3>Products</h3></legend>
+        <legend><h3>Product<span class="no-letter-spacing">s</span></h3></legend>
 
         <table class="form__table">
           <tr>
@@ -166,8 +166,10 @@
         </table>
       </fieldset>
 
-      <input class="btn btn--submit" type="submit" value="Submit">
-      <input class="btn btn--reset" type="reset" value="Reset">
+      <div class="form__btns">
+        <input class="btn form__btn" type="reset" value="Reset">
+        <input class="btn form__btn" type="submit" value="Submit">
+      </div>
     </form>
   </main>
 

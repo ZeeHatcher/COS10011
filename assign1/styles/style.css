@@ -27,6 +27,10 @@
   transform: translate(-50%, -50%);
 }
 
+.no-letter-spacing {
+  letter-spacing: 0;
+}
+
 .text-accent {
   color: #b6e2ff;
 }
@@ -92,6 +96,10 @@ input, textarea, select {
   padding: 0.5em;
 }
 
+input.btn {
+  background-color: transparent;
+}
+
 input:focus, textarea:focus {
   border-bottom: solid 1px #b6e2ff;
 }
@@ -103,6 +111,15 @@ legend {
 
 li {
   list-style: none;
+}
+
+optgroup {
+  background-color: #101010;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+option {
+  color: #fff;
 }
 
 section {
@@ -284,7 +301,7 @@ section {
 
 .card {
   display: block;
-  border: 1px solid #111;
+  border: 2px solid #111;
   width: 20%;
   height: 500px;
   position: relative;
@@ -337,6 +354,16 @@ section {
   opacity: 0.95;
 }
 
+.form__btn {
+  margin: 0 25px;
+}
+
+.form__btns {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+}
+
 .form__table {
   width: 100%;
 }
@@ -347,11 +374,9 @@ section {
   text-align: right;
   vertical-align: top;
   padding-right: 0.5em;
-
 }
 
 .form__input {
-  width: 75%;
   vertical-align: top;
   text-align: left;
 }
@@ -404,7 +429,6 @@ section {
   border-left: solid 5px #b6e2ff;
   border-right: solid 5px #b6e2ff;
   display: inline;
-  padding-left: 35px;
-  padding-right: 25px;
+  padding: 0 50px;
   text-align: center;
 }

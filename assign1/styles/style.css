@@ -284,7 +284,7 @@ section {
 
 .card {
   display: block;
-  /* border: solid 1px #111; */
+  border: 1px solid #111;
   width: 20%;
   height: 500px;
   position: relative;
@@ -334,7 +334,7 @@ section {
 }
 
 .card:hover .card__cover {
-  opacity: 1;
+  opacity: 0.95;
 }
 
 .form__table {

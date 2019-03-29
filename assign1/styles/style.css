@@ -388,6 +388,11 @@ section {
   background-color: #111;
 }
 
+.ctgry__item--active {
+  width: 110%;
+  border-right: solid 1px #b6e2ff;
+}
+
 .ctgry__title {
   padding: 20px;
   color: #b6e2ff;

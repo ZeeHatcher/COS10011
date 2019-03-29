@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-  <title>G L A C I E R | Home</title>
+  <title>G L A C I E R | Snowboards</title>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet"/>
@@ -12,6 +12,34 @@
 
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="styles/style.css"/>
+
+  <script>
+    window.onload = function() {
+      var displays = document.getElementsByClassName("display");
+      var btns = document.getElementsByClassName("ctgry__item");
+
+      function changeDisplay(id) {
+        id++;
+        var target = "display_" + id.toString();
+        var element = document.getElementById(target);
+
+        var i;
+        for (i = 0; i < displays.length; i++) {
+          displays[i].style.display = "none";
+        }
+
+        element.style.display = "block";
+      }
+
+      var i;
+      for (i = 0; i < btns.length; i++) {
+        let id = i;
+        btns[id].addEventListener("click", function() { changeDisplay(id) }, false)
+      }
+
+      changeDisplay(1);
+    }
+  </script>
 </head>
 <body>
   <header class="header">
@@ -47,16 +75,63 @@
     <div class="grid">
       <aside class="ctgry">
         <h3 class="ctgry__title">Categories</h3>
+
         <ul class="ctgry__list">
-          <li class="ctgry__item"><h3>All-Mountain</h3></li>
-          <li class="ctgry__item"><h3>Freestyle</h3></li>
-          <li class="ctgry__item"><h3>Powder</h3></li>
+          <li id="ctgry_1" class="ctgry__item"><h3>All-Mountain</h3></li>
+          <li id="ctgry_2" class="ctgry__item"><h3>Freestyle</h3></li>
+          <li id="ctgry_3" class="ctgry__item"><h3>Powder</h3></li>
         </ul>
       </aside>
 
-      <section class="container">
+      <section id="display_1" class="display">
         <article class="desc">
-          <h3 class="desc__title">Placeholder</h3>
+          <h3 class="desc__title">All-Mountain</h3>
+
+          <p class="desc__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </article>
+
+        <section class="items">
+          <div class="item">
+            <div class="placeholder"></div>
+            <h3>Placeholder</h3>
+          </div>
+          <div class="item">
+            <div class="placeholder"></div>
+            <h3>Placeholder</h3>
+          </div>
+          <div class="item">
+            <div class="placeholder"></div>
+            <h3>Placeholder</h3>
+          </div>
+        </section>
+      </section>
+
+      <section id="display_2" class="display">
+        <article class="desc">
+          <h3 class="desc__title">Freestyle</h3>
+
+          <p class="desc__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </article>
+
+        <section class="items">
+          <div class="item">
+            <div class="placeholder"></div>
+            <h3>Placeholder</h3>
+          </div>
+          <div class="item">
+            <div class="placeholder"></div>
+            <h3>Placeholder</h3>
+          </div>
+          <div class="item">
+            <div class="placeholder"></div>
+            <h3>Placeholder</h3>
+          </div>
+        </section>
+      </section>
+
+      <section id="display_3" class="display">
+        <article class="desc">
+          <h3 class="desc__title">Powder</h3>
 
           <p class="desc__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </article>

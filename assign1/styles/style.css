@@ -27,6 +27,11 @@
   transform: translate(-50%, -50%);
 }
 
+.is-pos-bottom {
+  position: absolute;
+  bottom: 0;
+}
+
 .link-underline {
   text-decoration: underline;
   transition: 0.2s;
@@ -63,10 +68,18 @@ body {
   color: #fff;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
+  min-height: 100vh;
+  position: relative;
 }
 
 footer {
   clear: both;
+}
+
+footer.student {
+  background-color: #111;
+  padding: 15px;
+  margin: 0;
 }
 
 form {
@@ -99,6 +112,10 @@ h2 {
 
 h3 {
   font-size: 1em;
+  letter-spacing: 0.25em;
+}
+
+h4 {
   letter-spacing: 0.25em;
 }
 
@@ -139,6 +156,10 @@ section {
   margin: 50px 0;
 }
 
+table, tr, th {
+  border-collapse: collapse;
+}
+
 /* **************************************************
     Header, Navbar, Footer, Disclaimer CSS
    ************************************************** */
@@ -167,15 +188,11 @@ section {
   margin-top: 25px;
 }
 
-.disclaimer__btn {
-  /* bottom: 50px; */
-}
-
 .footer {
  background-color: #111;
  display: flex;
  height: 300px;
- position: relative;
+ position: absolute;
  width: 100%;
 }
 
@@ -495,6 +512,28 @@ section {
   margin: 50px 150px;
 }
 
+.modern-table__header, .modern-table__item {
+  padding: 10px;
+}
+
+.modern-table__header:first-child, .modern-table__item:first-child {
+  border-right: 5px solid #111;
+}
+
+.modern-table__item:first-child {
+  text-align: center;
+}
+
+.modern-table__header {
+  border-top: 2px solid #b6e2ff;
+  border-bottom: 2px solid #b6e2ff;
+  color: #b6e2ff;
+}
+
+.modern-table__item {
+  border-bottom: 1px solid #111;
+}
+
 .placeholder {
   height: 400px;
   width: 250px;
@@ -517,47 +556,53 @@ section {
 }
 
 .student {
-  width: 50%;
+  width: 67%;
   margin: 50px auto;
 }
 
-.student__name {
+#student__btn {
+  width: 150px;
+  margin: 10px auto 0;
+  text-align: center;
+}
+
+#student__name {
   text-align: center;
   font-weight: bold;
   font-size: 200%;
 }
 
-.student__id {
+#student__id {
   text-align: right;
+  margin: 10px 0;
   font-family: "Arial", sans-serif;
   opacity: 0.5;
+  letter-spacing: 0.25em;
 }
 
-.student__course {
+#student__course {
   color: rgb(182, 226, 255);
+  text-align: center;
 }
 
-.student__photo {
+#student__photo {
   float: left;
   border: 10px groove #111;
   padding: 20px;
   margin-right: 2em;
 }
 
-.student__contrib {
-  margin: auto;
+#student__contrib {
+  margin: 30px auto;
+  width: 60%;
 }
 
-.student__email {
+#student__email {
   text-align: center;
 }
 
-.student__course, .student__contrib {
-  margin-top: 25px;
-}
-
-.studentnav {
-  width: 50%;
+#studentnav {
+  width: 67%;
   margin: auto;
   background-color: #111;
 }
@@ -567,7 +612,11 @@ section {
   justify-content: space-evenly;
 }
 
+.studentnav__item:hover {
+  border-bottom: solid 2px #b6e2ff;
+}
+
 .studentnav__link {
   display: block;
-  padding: 20px 30px;
+  padding: 20px 40px;
 }

@@ -1,0 +1,64 @@
+@media only screen and (max-width: 768px) {
+  h1 { font-size: 1.75em; }
+
+  .card {
+    width: 80%;
+    height: 300px;
+  }
+
+  .disclaimer {
+    width: 75%;
+  }
+
+  .footer {
+    display: none;
+  }
+
+  .header {
+    height: 75px;
+  }
+
+  .hero {
+    height: auto;
+  }
+
+  .hero__img {
+    width: 100%;
+    /* display: none; */
+  }
+
+  .hero__textbox {
+    width: 100%;
+    float: none;
+    padding: 25px;
+    text-align: center;
+    height: auto;
+  }
+
+  .info {
+    margin: 50px 50px;
+  }
+
+  .mobile-navbar__links {
+    display: block;
+  }
+
+  .navbar__links, .navbar__logo {
+    display: none;
+  }
+
+  .navbar__menu {
+    display: block;
+  }
+
+  .seperator {
+    padding: 25px;
+    border-bottom: 2px solid #b6e2ff;
+  }
+
+  .seperator__title {
+    padding: 0;
+    border: none;
+    background-color: inherit;
+  }
+}

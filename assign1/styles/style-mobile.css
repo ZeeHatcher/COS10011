@@ -33,14 +33,11 @@
     padding: 25px;
     text-align: center;
     height: auto;
+    background-color: inherit;
   }
 
   .info {
     margin: 50px 50px;
-  }
-
-  .mobile-navbar__links {
-    display: block;
   }
 
   .navbar__links, .navbar__logo {
@@ -49,6 +46,10 @@
 
   .navbar__menu {
     display: block;
+  }
+
+  .navbar__btn {
+    cursor: pointer;
   }
 
   .seperator {

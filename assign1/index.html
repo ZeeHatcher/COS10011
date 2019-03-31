@@ -39,9 +39,9 @@
     </ul>
 
     <div class="navbar__menu">
-      <a class="navbar__btn is-pos-x-y-center" href="">Button</a>
+      <div id="nav-btn" class="navbar__btn is-pos-x-y-center">Button</div>
     </div>
-    <ul class="mobile-navbar__links">
+    <ul id="nav" class="mobile-navbar__links">
       <li class="navbar__link"><a href="product1.html">
           <h3>Snowboards</h3>
         </a>
@@ -152,5 +152,24 @@
       <img class="footer__logo" src="images/company_logo_small.png" alt="Glacier Logo"/>
     </figure>
   </footer>
+
+  <script>
+    window.onload = function() {
+      var btn = document.getElementById("nav-btn");
+      var nav = document.getElementById("nav");
+
+      function toggleNav() {
+        toggled = nav.style.display == "block";
+
+        if (toggled) {
+          nav.style.display = "none";
+        } else {
+          nav.style.display = "block";
+        }
+      }
+
+      btn.addEventListener("click", toggleNav, false);
+    }
+  </script>
 </body>
 </html>

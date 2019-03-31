@@ -12,38 +12,6 @@
 
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="styles/style.css"/>
-
-  <script>
-    window.onload = function() {
-      var displays = document.getElementsByClassName("display");
-      var btns = document.getElementsByClassName("ctgry__item");
-
-      function changeDisplay(id) {
-        id++;
-        var target_id = "display_" + id.toString();
-        var btn_id = "ctgry_" + id.toString();
-        var element = document.getElementById(target_id);
-        var btn = document.getElementById(btn_id);
-
-        var i;
-        for (i = 0; i < displays.length; i++) {
-          displays[i].style.display = "none";
-          btns[i].className = "ctgry__item";
-        }
-
-        element.style.display = "block";
-        btn.className = "ctgry__item ctgry__item--active";
-      }
-
-      var i;
-      for (i = 0; i < btns.length; i++) {
-        let index = i;
-        btns[index].addEventListener("click", function() { changeDisplay(index) }, false)
-      }
-
-      changeDisplay(0);
-    }
-  </script>
 </head>
 <body>
   <header class="header">
@@ -66,7 +34,6 @@
           <li class="navbar__dropdown-link"><a href="product3.html"><h3 class="navbar__link--on-hover">Camping Gear</h3></a></li>
         </ul>
       </li>
-      <li class="navbar__link"><a href="about.html"><h3 class="navbar__link--on-hover">About Us</h3></a></li>
       <li class="navbar__link"><a href="enquiry.html"><h3 class="navbar__link--on-hover">Rent</h3></a></li>
     </ul>
   </nav>
@@ -194,5 +161,37 @@
       <img class="footer__logo" src="images/company_logo_small.png" alt="Glacier Logo"/>
     </figure>
   </footer>
+
+  <script>
+    window.onload = function() {
+      var displays = document.getElementsByClassName("display");
+      var btns = document.getElementsByClassName("ctgry__item");
+
+      function changeDisplay(id) {
+        id++;
+        var target_id = "display_" + id.toString();
+        var btn_id = "ctgry_" + id.toString();
+        var element = document.getElementById(target_id);
+        var btn = document.getElementById(btn_id);
+
+        var i;
+        for (i = 0; i < displays.length; i++) {
+          displays[i].style.display = "none";
+          btns[i].className = "ctgry__item";
+        }
+
+        element.style.display = "block";
+        btn.className = "ctgry__item ctgry__item--active";
+      }
+
+      var i;
+      for (i = 0; i < btns.length; i++) {
+        let index = i;
+        btns[index].addEventListener("click", function() { changeDisplay(index) }, false)
+      }
+
+      changeDisplay(0);
+    }
+  </script>
 </body>
 </html>

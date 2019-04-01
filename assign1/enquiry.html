@@ -33,45 +33,14 @@
 
     <ul class="navbar__links">
       <li class="navbar__link navbar__link--dropdown">
-        <h3 class="navbar__dropdown-title">Products</h3>
+        <h3 class="navbar__dropdown-title navbar__link--active">Products</h3>
         <ul class="navbar__dropdown">
-          <li class="navbar__dropdown-link"><a href="product1.html">
-              <h3 class="navbar__link--on-hover">Snowboards</h3>
-            </a></li>
-          <li class="navbar__dropdown-link"><a href="product2.html">
-              <h3 class="navbar__link--on-hover">Skis</h3>
-            </a></li>
-          <li class="navbar__dropdown-link"><a href="product3.html">
-              <h3 class="navbar__link--on-hover">Camping Gear</h3>
-            </a></li>
+          <li class="navbar__dropdown-link"><a href="product1.html"><h3 class="navbar__link--on-hover navbar__link--active">Snowboards</h3></a></li>
+          <li class="navbar__dropdown-link"><a href="product2.html"><h3 class="navbar__link--on-hover">Skis</h3></a></li>
+          <li class="navbar__dropdown-link"><a href="product3.html"><h3 class="navbar__link--on-hover">Camping Gear</h3></a></li>
         </ul>
       </li>
-      <li class="navbar__link"><a href="enquiry.html">
-          <h3 class="navbar__link--on-hover navbar__link--active">Rent</h3>
-        </a></li>
-    </ul>
-
-    <div class="navbar__menu">
-      <div id="nav-btn" class="navbar__btn is-pos-y-center">&#9776;</div>
-    </div>
-    <ul id="nav" class="mobile-navbar__links">
-      <li class="navbar__link"><a href="product1.html">
-          <h3 class="navbar__link--on-hover">Snowboards</h3>
-        </a>
-      </li>
-      <li class="navbar__link"><a href="product2.html">
-          <h3 class="navbar__link--on-hover">Skis</h3>
-        </a>
-      </li>
-      <li class="navbar__link"><a href="product3.html">
-          <h3 class="navbar__link--on-hover">Camping Gear</h3>
-        </a>
-      </li>
-      <li class="navbar__link">
-        <a href="enquiry.html">
-          <h3 class="navbar__link--on-hover">Rent</h3>
-        </a>
-      </li>
+      <li class="navbar__link"><a href="enquiry.html"><h3 class="navbar__link--on-hover">Rent</h3></a></li>
     </ul>
 
     <div class="navbar__menu">
@@ -102,18 +71,18 @@
     <form action="">
       <fieldset>
         <legend>
-          <h3>Personal Informatio<span class="no-letter-spacing">n</span></h3>
+          <h3>Persona<span class="no-letter-spacing">l</span></h3>
         </legend>
 
         <div class="form__grid">
           <label for="name">Name: </label>
           <div>
-            <input id="name" name="first_name" type="text" placeholder="First Name" maxlength="25" size="30" pattern="^[A-Za-z]+$" required />
-            <input name="last_name" type="text" placeholder="Last Name" maxlength="25" size="30" pattern="^[A-Za-z]+$" required />
+            <input id="name" name="first_name" type="text" placeholder="First Name" maxlength="25" pattern="^[A-Za-z]+$" required />
+            <input name="last_name" type="text" placeholder="Last Name" maxlength="25" pattern="^[A-Za-z]+$" required />
           </div>
 
           <label for="email">Email Address: </label>
-          <input id="email" name="email" type="email" size="30" placeholder="youremail@email.com" required />
+          <input id="email" name="email" type="email" placeholder="youremail@email.com" required />
 
           <label for="tele">Telephone Number: </label>
           <div>
@@ -131,10 +100,10 @@
 
         <div class="form__grid">
           <label for="street">Street Address: </label>
-          <input id="street" name="street_address" type="text" maxlength="40" size="50" required />
+          <input id="street" name="street_address" type="text" maxlength="40" required />
 
           <label for="city">City/Town: </label>
-          <input id="city" name="city" type="text" maxlength="20" size="25" required />
+          <input id="city" name="city" type="text" maxlength="20" required />
 
           <label for="state">State: </label>
           <select name="state" id="state" required>
@@ -162,7 +131,7 @@
           </select>
 
           <label for="postcode">Postcode: </label>
-          <input id="postcode" name="postcode" type="text" maxlength="5" size="5" pattern="^d+$" required />
+          <input id="postcode" name="postcode" type="text" maxlength="5" pattern="^d+$" required />
         </div>
       </fieldset>
 
@@ -179,7 +148,7 @@
           </div>
 
           <label for="comments">Comments: </label>
-          <textarea id="comments" name="comments" id="" cols="50" rows="4"></textarea>
+          <textarea id="comments" name="comments" id="comments" rows="4"></textarea>
         </div>
       </fieldset>
 

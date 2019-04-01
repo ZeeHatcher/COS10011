@@ -355,6 +355,15 @@ table, tr, th {
     Others
    ************************************************** */
 
+#benefit {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#benefit div {
+  margin: 25px;
+}
+
 .btn {
   border: solid 2px #fff;
   cursor: pointer;
@@ -480,12 +489,12 @@ table, tr, th {
 .form__btns {
   display: flex;
   justify-content: center;
-  margin: 25px 0;
+  margin: 25px auto;
 }
 
 .form__grid {
   display: grid;
-  grid-template-columns: 250px auto;
+  grid-template-columns: 30% 70%;
   grid-gap: 5px;
 }
 
@@ -540,8 +549,23 @@ table, tr, th {
 }
 
 .info {
+  padding: 25px 150px;
+}
+
+.info__text {
   text-align: center;
-  margin: 50px 150px;
+  margin-top: 15px;
+  margin-bottom: 50px;
+}
+
+.info__text:last-child {
+  margin-bottom: 0px;
+}
+
+.info__subtitle {
+  text-align: center;
+  margin: 15px;
+  color: #b6e2ff;
 }
 
 .modern-table__header, .modern-table__item {

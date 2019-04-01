@@ -13,6 +13,9 @@
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="styles/style.css"/>
   <link rel="stylesheet" type="text/css" href="styles/style-mobile.css">
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
 </head>
 <body>
   <header class="header">
@@ -39,24 +42,24 @@
     </ul>
 
     <div class="navbar__menu">
-      <div id="nav-btn" class="navbar__btn is-pos-x-y-center">Button</div>
+      <div id="nav-btn" class="navbar__btn is-pos-y-center">&#9776;</div>
     </div>
     <ul id="nav" class="mobile-navbar__links">
       <li class="navbar__link"><a href="product1.html">
-          <h3>Snowboards</h3>
+          <h3 class="navbar__link--on-hover">Snowboards</h3>
         </a>
       </li>
       <li class="navbar__link"><a href="product2.html">
-          <h3>Skis</h3>
+          <h3 class="navbar__link--on-hover">Skis</h3>
         </a>
       </li>
       <li class="navbar__link"><a href="product3.html">
-          <h3>Camping Gear</h3>
+          <h3 class="navbar__link--on-hover">Camping Gear</h3>
         </a>
       </li>
       <li class="navbar__link">
         <a href="enquiry.html">
-          <h3>Rent</h3>
+          <h3 class="navbar__link--on-hover">Rent</h3>
         </a>
       </li>
     </ul>
@@ -123,7 +126,7 @@
   </section>
 
   <footer class="footer">
-    <section class="footer__column">
+    <section id="footer__explore" class="footer__column">
       <h3 class="footer__title">Explore</h3>
 
       <ul class="footer__links">
@@ -131,12 +134,11 @@
         <li class="footer__link"><a class="footer__link--on-hover footer__bullet" href="product1.html">Snowboards</a></li>
         <li class="footer__link"><a class="footer__link--on-hover footer__bullet" href="product2.html">Skis</a></li>
         <li class="footer__link"><a class="footer__link--on-hover footer__bullet" href="product3.html">Camping Gear</a></li>
-        <li class="footer__link"><a class="footer__link--on-hover footer__bullet" href="about.html">About Us</a></li>
         <li class="footer__link"><a class="footer__link--on-hover footer__bullet" href="enquiry.html">Rent</a></li>
       </ul>
     </section>
 
-    <section class="footer__column">
+    <section id="footer__additional" class="footer__column">
       <h3 class="footer__title">Additional Information</h3>
 
       <ul class="footer__links">
@@ -152,24 +154,5 @@
       <img class="footer__logo" src="images/company_logo_small.png" alt="Glacier Logo"/>
     </figure>
   </footer>
-
-  <script>
-    window.onload = function() {
-      var btn = document.getElementById("nav-btn");
-      var nav = document.getElementById("nav");
-
-      function toggleNav() {
-        toggled = nav.style.display == "block";
-
-        if (toggled) {
-          nav.style.display = "none";
-        } else {
-          nav.style.display = "block";
-        }
-      }
-
-      btn.addEventListener("click", toggleNav, false);
-    }
-  </script>
 </body>
 </html>

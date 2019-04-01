@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>G L A C I E R | Rent</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" />
 
   <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="styles/style.css"/>
+  <link rel="stylesheet" type="text/css" href="styles/style.css" />
   <link rel="stylesheet" type="text/css" href="styles/style-mobile.css">
 
   <!-- JS -->
   <script src="js/main.js"></script>
 </head>
+
 <body>
   <header class="header">
     <a href="index.html">
-      <img class="header__logo" src="images/company_logo_large.png" alt="Company Logo"/>
+      <img class="header__logo" src="images/company_logo_large.png" alt="Company Logo" />
     </a>
   </header>
 
@@ -33,12 +35,20 @@
       <li class="navbar__link navbar__link--dropdown">
         <h3 class="navbar__dropdown-title">Products</h3>
         <ul class="navbar__dropdown">
-          <li class="navbar__dropdown-link"><a href="product1.html"><h3 class="navbar__link--on-hover">Snowboards</h3></a></li>
-          <li class="navbar__dropdown-link"><a href="product2.html"><h3 class="navbar__link--on-hover">Skis</h3></a></li>
-          <li class="navbar__dropdown-link"><a href="product3.html"><h3 class="navbar__link--on-hover">Camping Gear</h3></a></li>
+          <li class="navbar__dropdown-link"><a href="product1.html">
+              <h3 class="navbar__link--on-hover">Snowboards</h3>
+            </a></li>
+          <li class="navbar__dropdown-link"><a href="product2.html">
+              <h3 class="navbar__link--on-hover">Skis</h3>
+            </a></li>
+          <li class="navbar__dropdown-link"><a href="product3.html">
+              <h3 class="navbar__link--on-hover">Camping Gear</h3>
+            </a></li>
         </ul>
       </li>
-      <li class="navbar__link"><a href="enquiry.html"><h3 class="navbar__link--on-hover navbar__link--active">Rent</h3></a></li>
+      <li class="navbar__link"><a href="enquiry.html">
+          <h3 class="navbar__link--on-hover navbar__link--active">Rent</h3>
+        </a></li>
     </ul>
 
     <div class="navbar__menu">
@@ -91,128 +101,86 @@
   <main>
     <form action="">
       <fieldset>
-        <legend><h3>Personal Informatio<span class="no-letter-spacing">n</span></h3></legend>
+        <legend>
+          <h3>Personal Informatio<span class="no-letter-spacing">n</span></h3>
+        </legend>
 
-        <table class="form__table">
-          <tr>
-            <td class="form__label">
-              <label for="name">Name: </label>
-            </td>
-            <td class="form__input">
-              <input id="name" name="first_name" type="text" placeholder="First Name" maxlength="25" size="30" pattern="^[A-Za-z]+$" required/>
-              <input name="last_name" type="text" placeholder="Last Name" maxlength="25" size="30" pattern="^[A-Za-z]+$" required/>
-            </td>
-          </tr>
+        <div class="form__grid">
+          <label for="name">Name: </label>
+          <div>
+            <input id="name" name="first_name" type="text" placeholder="First Name" maxlength="25" size="30" pattern="^[A-Za-z]+$" required />
+            <input name="last_name" type="text" placeholder="Last Name" maxlength="25" size="30" pattern="^[A-Za-z]+$" required />
+          </div>
 
-          <tr>
-            <td class="form__label">
-              <label for="email">Email Address: </label>
-            </td>
-            <td class="form__input">
-              <input id="email" name="email" type="email" size="30" placeholder="youremail@email.com" required/>
-            </td>
-          </tr>
+          <label for="email">Email Address: </label>
+          <input id="email" name="email" type="email" size="30" placeholder="youremail@email.com" required />
 
-          <tr>
-            <td class="form__label">
-              <label for="tele">Telephone Number: </label>
-            </td>
-            <td class="form__input">
-              <input id="tele" name="tele_front" type="text" maxlength="3" size="1" placeholder="012" pattern="^d+$" required/>
-              -
-              <input name="tele_back" type="text" maxlength="7" size="7" placeholder="3456789" pattern="^d+$" required>
-            </td>
-          </tr>
-        </table>
+          <label for="tele">Telephone Number: </label>
+          <div>
+            <input id="tele" name="tele_front" type="text" maxlength="3" size="1" placeholder="012" pattern="^d+$" required />
+            <span class="form__col-2">-</span>
+            <input name="tele_back" type="text" maxlength="7" size="7" placeholder="3456789" pattern="^d+$" required>
+          </div>
+        </div>
       </fieldset>
 
       <fieldset>
-        <legend><h3>Addres<span class="no-letter-spacing">s</span></h3></legend>
+        <legend>
+          <h3>Addres<span class="no-letter-spacing">s</span></h3>
+        </legend>
 
-        <table class="form__table">
-          <tr>
-            <td class="form__label">
-              <label for="street">Street Address: </label>
-            </td>
-            <td class="form__input">
-              <input id="street" name="street_address" type="text" maxlength="40" size="50" required/>
-            </td>
-          </tr>
+        <div class="form__grid">
+          <label for="street">Street Address: </label>
+          <input id="street" name="street_address" type="text" maxlength="40" size="50" required />
 
-          <tr>
-            <td class="form__label">
-              <label for="city">City/Town: </label>
-            </td>
-            <td class="form__input">
-              <input id="city" name="city" type="text" maxlength="20" size="25" required/>
-            </td>
-          </tr>
+          <label for="city">City/Town: </label>
+          <input id="city" name="city" type="text" maxlength="20" size="25" required />
 
+          <label for="state">State: </label>
+          <select name="state" id="state" required>
+            <optgroup label="East Malaysia">
+              <option value="sabah">Sabah</option>
+              <option value="sarawak" selected>Sarawak</option>
+              <option value="labuan">Labuan</option>
+            </optgroup>
 
-          <tr>
-            <td class="form__label">
-              <label for="state">State: </label>
-            </td>
-            <td class="form__input">
-              <select name="state" id="state" required>
-                <optgroup label="East Malaysia">
-                  <option value="sabah">Sabah</option>
-                  <option value="sarawak" selected>Sarawak</option>
-                  <option value="labuan">Labuan</option>
-                </optgroup>
+            <optgroup label="West Malaysia">
+              <option value="johor">Johor</option>
+              <option value="kedah">Kedah</option>
+              <option value="kelantan">Kelantan</option>
+              <option value="kl">Kuala Lumpur</option>
+              <option value="melaka">Melaka</option>
+              <option value="negeri_sembilan">Negeri Sembilan</option>
+              <option value="pahang">Pahang</option>
+              <option value="penang">Penang</option>
+              <option value="perak">Perak</option>
+              <option value="perlis">Perlis</option>
+              <option value="putrajaya">Putrajaya</option>
+              <option value="selangor">Selangor</option>
+              <option value="terengganu">Terengganu</option>
+            </optgroup>
+          </select>
 
-                <optgroup label="West Malaysia">
-                  <option value="johor">Johor</option>
-                  <option value="kedah">Kedah</option>
-                  <option value="kelantan">Kelantan</option>
-                  <option value="kl">Kuala Lumpur</option>
-                  <option value="melaka">Melaka</option>
-                  <option value="negeri_sembilan">Negeri Sembilan</option>
-                  <option value="pahang">Pahang</option>
-                  <option value="penang">Penang</option>
-                  <option value="perak">Perak</option>
-                  <option value="perlis">Perlis</option>
-                  <option value="putrajaya">Putrajaya</option>
-                  <option value="selangor">Selangor</option>
-                  <option value="terengganu">Terengganu</option>
-                </optgroup>
-              </select>
-            </td>
-          </tr>
-
-          <tr>
-            <td class="form__label">
-              <label for="postcode">Postcode: </label>
-            </td>
-            <td class="form__input">
-              <input id="postcode" name="postcode" type="text" maxlength="5" size="5" pattern="^d+$" required/>
-            </td>
-          </tr>
-        </table>
+          <label for="postcode">Postcode: </label>
+          <input id="postcode" name="postcode" type="text" maxlength="5" size="5" pattern="^d+$" required />
+        </div>
       </fieldset>
 
       <fieldset>
-        <legend><h3>Product<span class="no-letter-spacing">s</span></h3></legend>
+        <legend>
+          <h3>Product<span class="no-letter-spacing">s</span></h3>
+        </legend>
 
-        <table class="form__table">
-          <tr>
-            <td class="form__label">
-              <label for="duration">Rental Duration: </label>
-            </td>
-            <td class="form__input">
-              <input id="duration" name="duration" type="number" min="0" required/> week(s)
-            </td>
-          </tr>
+        <div class="form__grid">
+          <label for="duration">Rental Duration: </label>
+          <div>
+            <input id="duration" name="duration" type="number" min="0" required />
+            <span class="form__col-2">week(s)</span>
+          </div>
 
-          <tr>
-            <td class="form__label">
-              <label for="comments">Comments: </label>
-            </td>
-            <td class="form__input">
-              <textarea id="comments" name="comments" id="" cols="50" rows="4"></textarea>
-            </td>
-          </tr>
-        </table>
+          <label for="comments">Comments: </label>
+          <textarea id="comments" name="comments" id="" cols="50" rows="4"></textarea>
+        </div>
       </fieldset>
 
       <div class="form__btns">
@@ -254,8 +222,9 @@
     <a href="#" class="btn footer__btn is-pos-x-center">Back To Top</a>
 
     <figure>
-      <img class="footer__logo" src="images/company_logo_small.png" alt="Glacier Logo"/>
+      <img class="footer__logo" src="images/company_logo_small.png" alt="Glacier Logo" />
     </figure>
   </footer>
 </body>
+
 </html>

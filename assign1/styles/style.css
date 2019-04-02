@@ -6,6 +6,25 @@
 */
 
 /* **************************************************
+    Card Backgrounds
+   ************************************************** */
+
+   #card-snowboard {
+     background-image: url("images/snowboard1.jpg"); /* https://grab-media.jp/wp-content/uploads/2018/09/GettyImages-503871626-1.jpg */
+     background-position: 20%;
+   }
+
+   #card-ski {
+     background-image: url("images/ski1.jpg"); /* http://apps.tourisme-alsace.info/photos/munster/photos/231007159_1.jpg */
+     background-position: 70%;
+   }
+
+   #card-camp {
+     background-image: url("images/camp1.jpg"); /* http://i.imgur.com/x61cTgo.jpg */
+     background-position: 40%;
+   }
+
+/* **************************************************
     Utility CSS
    ************************************************** */
 .is-pos-x-center {
@@ -380,21 +399,6 @@ input:focus, textarea:focus {
   background-size: cover;
 }
 
-#card-snowboard {
-  background-image: url("images/snowboard1.jpg"); /* https://grab-media.jp/wp-content/uploads/2018/09/GettyImages-503871626-1.jpg */
-  background-position: 20%;
-}
-
-#card-ski {
-  background-image: url("images/ski1.jpg"); /* http://apps.tourisme-alsace.info/photos/munster/photos/231007159_1.jpg */
-  background-position: 70%;
-}
-
-#card-camp {
-  background-image: url("images/camp1.jpg"); /* http://i.imgur.com/x61cTgo.jpg */
-  background-position: 40%;
-}
-
 .card {
   display: block;
   border: 2px solid #111;
@@ -404,6 +408,11 @@ input:focus, textarea:focus {
   text-align: center;
   transition: 0.2s;
   margin: 25px;
+}
+
+.items .card {
+  max-width: 250px;
+  height: 400px;
 }
 
 .card__cover {
@@ -576,18 +585,6 @@ footer.student {
 
 input.btn {
   background-color: transparent;
-}
-
-.item {
-  text-align: center;
-  margin: 50px 50px;
-}
-
-.items {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 
 main.student {

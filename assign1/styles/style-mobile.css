@@ -104,6 +104,20 @@
     border: none;
     background-color: inherit;
   }
+  
+  .student {
+    width: 100%;
+    padding: 15px;
+  }
+  
+  #student__contrib {
+    width: 90%;
+  }
+    
+  #student__photo {
+    width: 200px;
+    height: 267px;
+  }
 
   #studentnav {
     width: 100%;

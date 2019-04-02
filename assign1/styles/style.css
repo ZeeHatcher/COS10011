@@ -70,6 +70,7 @@ body {
   font-size: 16px;
   min-height: 100vh;
   position: relative;
+  padding: 1px;
 }
 
 footer {
@@ -79,7 +80,7 @@ footer {
 footer.student {
   background-color: #111;
   padding: 15px;
-  margin: 0;
+  margin-top: 100px;
 }
 
 form {
@@ -141,6 +142,10 @@ legend {
 
 li {
   list-style: none;
+}
+
+main.student {
+  margin-bottom: 200px;
 }
 
 optgroup {
@@ -614,7 +619,12 @@ table, tr, th {
 
 .student {
   width: 67%;
-  margin: 50px auto;
+  margin: 50px auto 0;
+}
+
+#student__additional {
+  clear: both;
+  margin: 0;
 }
 
 #student__btn {
@@ -647,6 +657,9 @@ table, tr, th {
   border: 10px groove #111;
   padding: 20px;
   margin-right: 2em;
+  margin-bottom: 50px;
+  width: 300px;
+  height: 400px;
 }
 
 #student__contrib {

@@ -104,9 +104,9 @@
   }
   
   .product__details {
-    margin-left: 25px;
+    text-align: center;
   }
-
+  
   .seperator {
     padding: 25px;
     border-bottom: 2px solid #b6e2ff;

@@ -606,12 +606,17 @@ table, tr, th {
 .product {
   width: 50%;
   margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   overflow: hidden;
 }
 
 .product__img {
-  margin: 0 50px;
-  float: left
+  margin: 0 100px 25px 0;
+}
+
+.product__details {
 }
 
 .product__property {

@@ -1,5 +1,5 @@
 window.onload = function() {
-  // Mobile Navigation Bar Functions
+  // Mobile Navigation Bar Function
   var btn = document.getElementById("nav-btn");
   var nav = document.getElementById("nav");
 
@@ -15,7 +15,7 @@ window.onload = function() {
 
   btn.addEventListener("click", toggleNav, false);
 
-  // Products Display Change Functions
+  // product.html Display Change Function
   var displays = document.getElementsByClassName("display");
   var btns = document.getElementsByClassName("ctgry__item");
 

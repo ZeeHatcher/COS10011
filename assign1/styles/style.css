@@ -84,12 +84,6 @@ footer {
   clear: both;
 }
 
-footer.student {
-  background-color: #111;
-  padding: 15px;
-  margin-top: 100px;
-}
-
 form {
   width: 60%;
   margin: 50px auto;
@@ -144,6 +138,10 @@ p {
 
 section {
   margin: 50px 0;
+}
+
+select {
+  width: 150px;
 }
 
 table, tr, th {
@@ -355,10 +353,12 @@ input:focus, textarea:focus {
 #benefit {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 #benefit div {
   margin: 25px;
+  max-width: 300px;
 }
 
 .btn {
@@ -487,6 +487,11 @@ input:focus, textarea:focus {
   max-width: 250px;
 }
 
+footer.student {
+  background-color: #111;
+  padding: 15px;
+}
+
 .form__btn {
   margin: 0 25px;
 }
@@ -586,7 +591,7 @@ input.btn {
 }
 
 main.student {
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 
 .modern-table__header {
@@ -624,7 +629,7 @@ main.student {
 }
 
 .product {
-  width: 50%;
+  width: 75%;
   margin: 50px auto;
   display: flex;
   justify-content: center;
@@ -653,10 +658,6 @@ main.student {
   display: inline;
   padding: 0 50px;
   text-align: center;
-}
-
-#state {
-  width: 150px;
 }
 
 #student__additional {
@@ -693,6 +694,10 @@ main.student {
   letter-spacing: 0.25em;
 }
 
+#student__misc {
+  padding: 50px;
+}
+
 #student__name {
   text-align: center;
   font-weight: bold;
@@ -718,6 +723,17 @@ main.student {
 .student {
   width: 80%;
   margin: 50px auto 0;
+}
+
+.student__chars {
+  margin-top: 25px;
+}
+
+.student__property {
+  color: #b6e2ff;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  margin-right: 1em;
 }
 
 .studentnav__item:hover {

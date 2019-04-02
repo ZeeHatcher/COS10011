@@ -54,10 +54,6 @@
     font-weight: 700;
   }
 
-  .ctgry__list {
-
-  }
-
   .ctgry__title {
     display: none;
   }
@@ -83,12 +79,12 @@
     margin-top: 25px;
   }
 
-  .footer__btn, .footer__logo, #footer__explore {
-    display: none;
-  }
-
   .footer__column {
     margin: 30px 30px;
+  }
+
+  .footer__btn, .footer__logo, #footer__explore {
+    display: none;
   }
 
   .form__grid label, .form__grid div, .form__grid input, .form__grid select, .form__grid textarea, .form__col-2 {
@@ -154,12 +150,12 @@
     padding: 25px;
   }
 
-  .product__img {
-    margin: 0 25px 25px 0;
-  }
-
   .product__details {
     text-align: center;
+  }
+
+  .product__img {
+    margin: 0 25px 25px 0;
   }
 
   .seperator {
@@ -171,14 +167,6 @@
     padding: 0;
     border: none;
     background-color: inherit;
-  }
-
-  .student {
-    width: 100%;
-  }
-
-  #student__info, .student__misc {
-    padding: 25px;
   }
 
   #student__contrib {
@@ -194,11 +182,19 @@
     width: 100%;
   }
 
+  .student {
+    width: 100%;
+  }
+
   .studentnav__items {
     display: block;
   }
 
   .studentnav__item {
     text-align: center;
+  }
+
+  #student__info, .student__misc {
+    padding: 25px;
   }
 }

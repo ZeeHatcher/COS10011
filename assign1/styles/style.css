@@ -73,6 +73,13 @@ body {
   padding-bottom: 1px;
 }
 
+fieldset {
+  width: 100%;
+  border-color: rgba(255, 255, 255, 0.2);
+  margin-top: 25px;
+  padding: 25px;
+}
+
 footer {
   clear: both;
 }
@@ -86,13 +93,6 @@ footer.student {
 form {
   width: 60%;
   margin: 50px auto;
-}
-
-fieldset {
-  width: 100%;
-  border-color: rgba(255, 255, 255, 0.2);
-  margin-top: 25px;
-  padding: 25px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -120,21 +120,6 @@ h4 {
   letter-spacing: 0.25em;
 }
 
-input, textarea, select {
-  background-color: #111;
-  color: #fff;
-  border: none;
-  padding: 0.5em;
-}
-
-input.btn {
-  background-color: transparent;
-}
-
-input:focus, textarea:focus {
-  border-bottom: solid 1px #b6e2ff;
-}
-
 legend {
   padding: 0 1em;
   color: #b6e2ff;
@@ -142,10 +127,6 @@ legend {
 
 li {
   list-style: none;
-}
-
-main.student {
-  margin-bottom: 200px;
 }
 
 optgroup {
@@ -169,6 +150,17 @@ table, tr, th {
   border-collapse: collapse;
 }
 
+input, textarea, select {
+  background-color: #111;
+  color: #fff;
+  border: none;
+  padding: 0.5em;
+}
+
+input:focus, textarea:focus {
+  border-bottom: solid 1px #b6e2ff;
+}
+
 /* **************************************************
     Header, Navbar, Footer, Disclaimer CSS
    ************************************************** */
@@ -189,12 +181,12 @@ table, tr, th {
   margin: 50px auto;
 }
 
-.disclaimer__title {
-  color: #b6e2ff;
-}
-
 .disclaimer__p {
   margin-top: 25px;
+}
+
+.disclaimer__title {
+  color: #b6e2ff;
 }
 
 .footer {
@@ -205,21 +197,21 @@ table, tr, th {
  width: 100%;
 }
 
-.footer__column {
- margin: 50px 50px;
-}
-
-.footer__title {
- color: #b6e2ff;
-}
-
-.footer__link {
- margin-top: 5px;
+.footer__btn {
+  bottom: 25px;
 }
 
 .footer__bullet::before {
  content: "|";
  margin-right: 0.5em;
+}
+
+.footer__column {
+ margin: 50px 50px;
+}
+
+.footer__link {
+  margin-top: 5px;
 }
 
 .footer__link--on-hover {
@@ -231,15 +223,15 @@ table, tr, th {
   opacity: 0.6;
 }
 
-.footer__btn {
-  bottom: 25px;
-}
-
 .footer__logo {
   position: absolute;
   right: 50px;
   bottom: 50px;
   opacity: 0.2;
+}
+
+.footer__title {
+ color: #b6e2ff;
 }
 
 .header {
@@ -263,35 +255,9 @@ table, tr, th {
  z-index: 10;
 }
 
-.navbar__logo {
- display: inline-block;
- background-color: #b6e2ff;
- padding: 20px 50px;
- text-align: center;
- /* width: 300px; */
- color: #111;
- transition: 0.2s;
-}
-
-.navbar__logo:hover {
-  background-color: #fff;
-  color: #111;
-}
-
-.navbar__links{
- display: inline-block;
- float: right;
- padding: 25px;
-}
-
-.navbar__link {
- display: inline-block;
- list-style: none;
- margin: 0 25px;
-}
-
-.navbar__link--dropdown {
- position: relative;
+.navbar__btn {
+  font-size: 1.5em;
+  right: 15px;
 }
 
 .navbar__dropdown {
@@ -302,21 +268,46 @@ table, tr, th {
  border-bottom: solid 2px #b6e2ff;
 }
 
+.navbar__link--dropdown:hover .navbar__dropdown {
+  display: block;
+}
+
+.navbar__dropdown-link {
+  margin: 25px;
+}
+
 .navbar__dropdown-title {
   transition: 0.2s;
   cursor: default;
 }
 
-.navbar__dropdown-link {
- margin: 25px;
-}
-
-.navbar__link--dropdown:hover .navbar__dropdown {
- display: block;
-}
-
 .navbar__link--dropdown:hover .navbar__dropdown-title {
   color: #b6e2ff;
+}
+
+.navbar__link {
+ display: inline-block;
+ list-style: none;
+ margin: 0 25px;
+}
+
+.mobile-navbar__links .navbar__link {
+  display: block;
+  text-align: center;
+}
+
+.mobile-navbar__links {
+  display: none;
+  border-bottom: 2px solid #b6e2ff;
+  padding-top: 15px;
+}
+
+.mobile-navbar__links h3 {
+  padding: 10px;
+}
+
+.navbar__link--active {
+  font-weight: 700;
 }
 
 .navbar__link--on-hover {
@@ -327,26 +318,23 @@ table, tr, th {
  color: #b6e2ff;
 }
 
-.navbar__link--active {
-  font-weight: 700;
+.navbar__link--dropdown {
+ position: relative;
 }
 
-.mobile-navbar__links {
-  display: none;
-  border-bottom: 2px solid #b6e2ff;
+.navbar__links {
+ display: inline-block;
+ float: right;
+ padding: 25px;
 }
 
-.mobile-navbar__links {
-  padding-top: 15px;
-}
-
-.mobile-navbar__links h3 {
-  padding: 10px;
-}
-
-.mobile-navbar__links .navbar__link {
-  display: block;
-  text-align: center;
+.navbar__logo {
+ display: inline-block;
+ background-color: #b6e2ff;
+ padding: 20px 50px;
+ text-align: center;
+ color: #111;
+ transition: 0.2s;
 }
 
 .navbar__menu {
@@ -355,9 +343,9 @@ table, tr, th {
   display: none;
 }
 
-.navbar__btn {
-  font-size: 1.5em;
-  right: 15px;
+.navbar__logo:hover {
+  background-color: #fff;
+  color: #111;
 }
 
 /* **************************************************
@@ -387,18 +375,7 @@ table, tr, th {
   color: #111;
 }
 
-.card {
-  display: block;
-  border: 2px solid #111;
-  width: 300px;
-  height: 500px;
-  position: relative;
-  text-align: center;
-  transition: 0.2s;
-  margin: 25px;
-}
-
-[class*="card--bg"] {
+[id*="card-"] {
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -418,11 +395,26 @@ table, tr, th {
   background-position: 40%;
 }
 
+.card {
+  display: block;
+  border: 2px solid #111;
+  width: 300px;
+  height: 500px;
+  position: relative;
+  text-align: center;
+  transition: 0.2s;
+  margin: 25px;
+}
+
 .card__cover {
   height: 100%;
   background-color: #111;
   opacity: 0;
   transition: 0.2s;
+}
+
+.card:hover .card__cover {
+  opacity: 0.95;
 }
 
 .card__title {
@@ -439,8 +431,8 @@ table, tr, th {
   flex-wrap: wrap;
 }
 
-.card:hover .card__cover {
-  opacity: 0.95;
+#city {
+  width: 200px;
 }
 
 .ctgry {
@@ -457,6 +449,11 @@ table, tr, th {
   background-color: #111;
 }
 
+.ctgry__item:hover {
+  width: 110%;
+  border-right: solid 1px #b6e2ff;
+}
+
 .ctgry__item--active {
   width: 110%;
   border-right: solid 1px #b6e2ff;
@@ -468,27 +465,26 @@ table, tr, th {
   font-weight: 700;
 }
 
-.ctgry__item:hover {
-  width: 110%;
-  border-right: solid 1px #b6e2ff;
-}
-
 .desc {
   text-align: center;
   padding: 25px 100px;
-}
-
-.desc__title {
-  color: #b6e2ff;
 }
 
 .desc__text {
   margin-top: 25px;
 }
 
+.desc__title {
+  color: #b6e2ff;
+}
+
 .display {
   margin-top: 0;
   display: none;
+}
+
+#email {
+  max-width: 250px;
 }
 
 .form__btn {
@@ -536,11 +532,8 @@ table, tr, th {
   bottom: 75px;
 }
 
-.hero__textbox {
-  background-color: #111;
-  padding: 75px;
-  padding-bottom: 100px;
-  position: relative;
+.hero__desc {
+  margin-top: 25px;
 }
 
 .hero__img {
@@ -549,8 +542,35 @@ table, tr, th {
   object-fit: cover;
 }
 
-.hero__desc {
-  margin-top: 25px;
+.hero__textbox {
+  background-color: #111;
+  padding: 75px;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.info {
+  padding: 25px 150px;
+}
+
+.info__subtitle {
+  text-align: center;
+  margin: 15px;
+  color: #b6e2ff;
+}
+
+.info__text {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 50px;
+}
+
+.info__text:last-child {
+  margin-bottom: 0px;
+}
+
+input.btn {
+  background-color: transparent;
 }
 
 .item {
@@ -565,37 +585,8 @@ table, tr, th {
   flex-wrap: wrap;
 }
 
-.info {
-  padding: 25px 150px;
-}
-
-.info__text {
-  text-align: center;
-  margin-top: 15px;
-  margin-bottom: 50px;
-}
-
-.info__text:last-child {
-  margin-bottom: 0px;
-}
-
-.info__subtitle {
-  text-align: center;
-  margin: 15px;
-  color: #b6e2ff;
-}
-
-.modern-table__header, .modern-table__item {
-  padding: 10px;
-  background-color: #1a1a1a;
-}
-
-.modern-table__header:first-child, .modern-table__item:first-child {
-  border-right: 5px solid #111;
-}
-
-.modern-table__item:first-child {
-  text-align: center;
+main.student {
+  margin-bottom: 200px;
 }
 
 .modern-table__header {
@@ -608,11 +599,28 @@ table, tr, th {
   border-bottom: 1px solid #111;
 }
 
+.modern-table__item:first-child {
+  text-align: center;
+}
+
+.modern-table__header, .modern-table__item {
+  padding: 10px;
+  background-color: #1a1a1a;
+}
+
+.modern-table__header:first-child, .modern-table__item:first-child {
+  border-right: 5px solid #111;
+}
+
 .placeholder {
   height: 400px;
   width: 250px;
   border: solid 2px #111;
   margin: auto;
+}
+
+#postcode {
+  width: 75px;
 }
 
 .product {
@@ -626,9 +634,6 @@ table, tr, th {
 
 .product__img {
   margin: 0 100px 25px 0;
-}
-
-.product__details {
 }
 
 .product__property {
@@ -650,9 +655,8 @@ table, tr, th {
   text-align: center;
 }
 
-.student {
-  width: 80%;
-  margin: 50px auto 0;
+#state {
+  width: 150px;
 }
 
 #student__additional {
@@ -666,10 +670,19 @@ table, tr, th {
   text-align: center;
 }
 
-#student__name {
+#student__contrib {
+  margin: 30px auto;
+  width: 100%;
+  max-width: 750px;
+}
+
+#student__course {
+  color: rgb(182, 226, 255);
   text-align: center;
-  font-weight: bold;
-  font-size: 200%;
+}
+
+#student__email {
+  text-align: center;
 }
 
 #student__id {
@@ -680,9 +693,10 @@ table, tr, th {
   letter-spacing: 0.25em;
 }
 
-#student__course {
-  color: rgb(182, 226, 255);
+#student__name {
   text-align: center;
+  font-weight: bold;
+  font-size: 200%;
 }
 
 #student__photo {
@@ -695,33 +709,19 @@ table, tr, th {
   height: 400px;
 }
 
-#student__contrib {
-  margin: 30px auto;
-  width: 100%;
-  max-width: 750px;
-}
-
-#student__email {
-  text-align: center;
-}
-
 #studentnav {
   width: 80%;
   margin: auto;
   background-color: #111;
 }
 
-.studentnav__items {
-  display: flex;
-  justify-content: space-evenly;
+.student {
+  width: 80%;
+  margin: 50px auto 0;
 }
 
 .studentnav__item:hover {
   border-bottom: solid 1px #b6e2ff;
-}
-
-.studentnav__item--active, .studentnav__item--active:hover {
-  border-bottom: solid 2px #b6e2ff;
 }
 
 .studentnav__item--active h3 {
@@ -731,4 +731,13 @@ table, tr, th {
 .studentnav__link {
   display: block;
   padding: 20px 40px;
+}
+
+.studentnav__items {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.studentnav__item--active, .studentnav__item--active:hover {
+  border-bottom: solid 2px #b6e2ff;
 }

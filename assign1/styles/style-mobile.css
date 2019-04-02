@@ -169,11 +169,14 @@
 
   .student {
     width: 100%;
-    padding: 15px;
+  }
+
+  #student__info, .student__misc {
+    padding: 25px;
   }
 
   #student__contrib {
-    width: 90%;
+    width: 100%;
   }
 
   #student__photo {

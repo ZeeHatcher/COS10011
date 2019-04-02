@@ -639,7 +639,7 @@ table, tr, th {
 }
 
 .student {
-  width: 67%;
+  width: 80%;
   margin: 50px auto 0;
 }
 
@@ -685,7 +685,8 @@ table, tr, th {
 
 #student__contrib {
   margin: 30px auto;
-  width: 60%;
+  width: 100%;
+  max-width: 750px;
 }
 
 #student__email {
@@ -693,7 +694,7 @@ table, tr, th {
 }
 
 #studentnav {
-  width: 67%;
+  width: 80%;
   margin: auto;
   background-color: #111;
 }

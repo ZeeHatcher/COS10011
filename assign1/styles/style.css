@@ -68,7 +68,7 @@ body {
   color: #fff;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   position: relative;
   padding-bottom: 1px;
 }
@@ -155,6 +155,10 @@ optgroup {
 
 option {
   color: #fff;
+}
+
+p {
+  line-height: 1.5em;
 }
 
 section {
@@ -399,18 +403,18 @@ table, tr, th {
   background-size: cover;
 }
 
-.card--bg-snowboard {
-  background-image: url("images/snowboard1.jpg");
+#card-snowboard {
+  background-image: url("images/snowboard1.jpg"); /* https://grab-media.jp/wp-content/uploads/2018/09/GettyImages-503871626-1.jpg */
   background-position: 20%;
 }
 
-.card--bg-ski {
-  background-image: url("images/ski1.jpg");
+#card-ski {
+  background-image: url("images/ski1.jpg"); /* http://apps.tourisme-alsace.info/photos/munster/photos/231007159_1.jpg */
   background-position: 70%;
 }
 
-.card--bg-camp {
-  background-image: url("images/camp1.jpg");
+#card-camp {
+  background-image: url("images/camp1.jpg"); /* http://i.imgur.com/x61cTgo.jpg */
   background-position: 40%;
 }
 

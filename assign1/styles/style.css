@@ -70,7 +70,7 @@ body {
   font-size: 16px;
   min-height: 100vh;
   position: relative;
-  padding: 1px;
+  padding-bottom: 1px;
 }
 
 footer {
@@ -601,6 +601,22 @@ table, tr, th {
   width: 250px;
   border: solid 2px #111;
   margin: auto;
+}
+
+.product {
+  width: 50%;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+.product__img {
+  margin: 0 50px;
+  float: left
+}
+
+.product__property {
+  color: #b6e2ff;
+  margin-top: 1em;
 }
 
 .seperator {

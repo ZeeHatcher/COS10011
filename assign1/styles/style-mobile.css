@@ -93,6 +93,19 @@
   .navbar__btn {
     cursor: pointer;
   }
+  
+  .product {
+    width: 100%;
+    padding: 25px;
+  }
+  
+  .product__img {
+    margin: 0 25px 25px 0;
+  }
+  
+  .product__details {
+    margin-left: 25px;
+  }
 
   .seperator {
     padding: 25px;

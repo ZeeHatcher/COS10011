@@ -23,6 +23,21 @@
      background-image: url("images/camp1.jpg"); /* http://i.imgur.com/x61cTgo.jpg */
      background-position: 40%;
    }
+   
+   #AllMount1 {
+     background-image: url("images/AllMountain1.jpg"); /* https://grab-media.jp/wp-content/uploads/2018/09/GettyImages-503871626-1.jpg */
+     background-position: 0%;
+   }
+   
+   #AllMount2 {
+     background-image: url("images/AllMountain2.jpg"); /* https://grab-media.jp/wp-content/uploads/2018/09/GettyImages-503871626-1.jpg */
+     background-position: 0%;
+   }
+   
+   #AllMount3 {
+     background-image: url("images/AllMountain3.jpg"); /* https://grab-media.jp/wp-content/uploads/2018/09/GettyImages-503871626-1.jpg */
+     background-position: 0%;
+   }
 
 /* **************************************************
     Utility CSS

@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-  <title>G L A C I E R | Camping</title>
+  <title>G L A C I E R | Snowboards</title>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet"/>
@@ -33,9 +33,9 @@
       <li class="navbar__link navbar__link--dropdown">
         <h3 class="navbar__dropdown-title navbar__link--active">Products</h3>
         <ul class="navbar__dropdown">
-          <li class="navbar__dropdown-link"><a href="product1.html"><h3 class="navbar__link--on-hover">Snowboards</h3></a></li>
+          <li class="navbar__dropdown-link"><a href="product1.html"><h3 class="navbar__link--on-hover navbar__link--active">Snowboards</h3></a></li>
           <li class="navbar__dropdown-link"><a href="product2.html"><h3 class="navbar__link--on-hover">Skis</h3></a></li>
-          <li class="navbar__dropdown-link"><a href="product3.html"><h3 class="navbar__link--on-hover navbar__link--active">Camping Gear</h3></a></li>
+          <li class="navbar__dropdown-link"><a href="product3.html"><h3 class="navbar__link--on-hover">Camping Gear</h3></a></li>
         </ul>
       </li>
       <li class="navbar__link"><a href="enquiry.html"><h3 class="navbar__link--on-hover">Rent</h3></a></li>
@@ -46,7 +46,7 @@
     </div>
     <ul id="nav" class="mobile-navbar__links">
       <li class="navbar__link"><a href="product1.html">
-          <h3 class="navbar__link--on-hover">Snowboards</h3>
+          <h3 class="navbar__link--on-hover navbar__link--active">Snowboards</h3>
         </a>
       </li>
       <li class="navbar__link"><a href="product2.html">
@@ -54,7 +54,7 @@
         </a>
       </li>
       <li class="navbar__link"><a href="product3.html">
-          <h3 class="navbar__link--on-hover navbar__link--active">Camping Gear</h3>
+          <h3 class="navbar__link--on-hover">Camping Gear</h3>
         </a>
       </li>
       <li class="navbar__link">
@@ -71,35 +71,41 @@
         <h3 class="ctgry__title">Categories</h3>
 
         <ul class="ctgry__list">
-          <li id="ctgry_1" class="ctgry__item"><h3>Tents</h3></li>
-          <li id="ctgry_2" class="ctgry__item"><h3>Tools</h3></li>
-          <li id="ctgry_3" class="ctgry__item"><h3>Miscellaneous</h3></li>
+          <li id="ctgry_1" class="ctgry__item"><h3>All-Mountain</h3></li>
+          <li id="ctgry_2" class="ctgry__item"><h3>Freestyle</h3></li>
+          <li id="ctgry_3" class="ctgry__item"><h3>Powder</h3></li>
         </ul>
       </aside>
 
       <section id="display_1" class="display">
         <article class="desc">
-          <h3 class="desc__title">Tents</h3>
+          <h3 class="desc__title">All-Mountain</h3>
 
-          <p class="desc__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p class="desc__text">
+            All-mountain snowboards are your everyday, all-rounder snowboards that can be used on all kinds of terrain, and on any part of a mountain. They are versatile, and a great go-to for beginners that are taking their first steps into snowboarding. Due to their versatility, it's great for the kinds of people that want to try out all styles of snowboarding. For more info, click <a class="link-underline" href="https://www.rei.com/learn/expert-advice/snowboard.html">here</a>.
+          </p> <!-- Referenced from https://www.rei.com/learn/expert-advice/snowboard.html -->
+
+          <p class="desc__text">
+            Get an all-mountain snowboard if you're just starting out, or you're unsure which to choose.
+          </p>
         </article>
 
         <section class="cards items">
-          <a href="product3_1.html" id="" class="card">
+          <a href="product1_1.html" id="product1_1" class="card">
             <div class="card__cover">
-              <h1 class="card__title"><span class="no-letter-spacing"></span></h1>
+              <h1 class="card__title">Col<span class="no-letter-spacing">d</span> Bre<span class="no-letter-spacing">w</span> C<span class="no-letter-spacing">2</span></h1>
             </div>
           </a>
 
-          <a href="product3_2.html" id="" class="card">
+          <a href="product1_2.html" id="product1_2" class="card">
             <div class="card__cover">
-              <h1 class="card__title"><span class="no-letter-spacing"></span></h1>
+              <h1 class="card__title">Maveric<span class="no-letter-spacing">k</span></h1>
             </div>
           </a>
 
-          <a href="product3_3.html" id="" class="card">
+          <a href="product1_3.html" id="product1_3" class="card">
             <div class="card__cover">
-              <h1 class="card__title"><span class="no-letter-spacing"></span></h1>
+              <h1 class="card__title">Merak<span class="no-letter-spacing">i</span></h1>
             </div>
           </a>
         </section>
@@ -107,27 +113,33 @@
 
       <section id="display_2" class="display">
         <article class="desc">
-          <h3 class="desc__title">Tools</h3>
+          <h3 class="desc__title">Freestyle</h3>
 
-          <p class="desc__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p class="desc__text">
+            Freestyle snowboards are for people that want more fun and action. It's lighter, shorter and more flexible, allowing for more maneuverability. These type of snowboards are not recommended for beginners though, since the lightness and shortness can affect stability. For more info, click <a class="link-underline" href="https://www.rei.com/learn/expert-advice/snowboard.html">here</a>. <!-- Referenced from https://www.rei.com/learn/expert-advice/snowboard.html -->
+          </p>
+
+          <p class="desc__text">
+            If you're more experienced and want to push your limits, try out freestyle snowboards!
+          </p>
         </article>
 
         <section class="cards items">
-          <a href="product3_4.html" id="" class="card">
+          <a href="product1_4.html" id="product1_4" class="card">
             <div class="card__cover">
-              <h1 class="card__title"><span class="no-letter-spacing"></span></h1>
+              <h1 class="card__title">K<span class="no-letter-spacing">2</span> Raygu<span class="no-letter-spacing">n</span></h1>
             </div>
           </a>
 
-          <a href="product3_5.html" id="" class="card">
+          <a href="product1_5.html" id="product1_5" class="card">
             <div class="card__cover">
-              <h1 class="card__title"><span class="no-letter-spacing"></span></h1>
+              <h1 class="card__title">Venu<span class="no-letter-spacing">s</span></h1>
             </div>
           </a>
 
-          <a href="product3_6.html" id="" class="card">
+          <a href="product1_6.html" id="product1_6" class="card">
             <div class="card__cover">
-              <h1 class="card__title"><span class="no-letter-spacing"></span></h1>
+              <h1 class="card__title">Klass<span class="no-letter-spacing">y</span> C2<span class="no-letter-spacing">X</span></h1>
             </div>
           </a>
         </section>
@@ -135,27 +147,33 @@
 
       <section id="display_3" class="display">
         <article class="desc">
-          <h3 class="desc__title">Miscellaneous</h3>
+          <h3 class="desc__title">Powder</h3>
 
-          <p class="desc__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p class="desc__text">
+            Powder refers to deep powder snow. It's soft, deep snow that most skiiers and snowboarders love. Powder snowboards are designed with deep snow in mind, so it has a significantly different profile compared to other snowboard types. Thus, it won't be as usable on other terrains. For more info, click <a class="link-underline" href="https://www.rei.com/learn/expert-advice/snowboard.html">here</a>. <!-- Referenced from https://www.rei.com/learn/expert-advice/snowboard.html -->
+          </p>
+
+          <p class="desc__text">
+            If you're experienced enough with snowboarding, and want a taste of deep, soft powder, then powder snowboards are your choice.
+          </p>
         </article>
 
         <section class="cards items">
-          <a href="product3_7.html" id="" class="card">
+          <a href="product1_7.html" id="product1_7" class="card">
             <div class="card__cover">
-              <h1 class="card__title"><span class="no-letter-spacing"></span></h1>
+              <h1 class="card__title">Pik<span class="no-letter-spacing">e</span></h1>
             </div>
           </a>
 
-          <a href="product3_8.html" id="" class="card">
+          <a href="product1_8.html" id="product1_8" class="card">
             <div class="card__cover">
-              <h1 class="card__title"><span class="no-letter-spacing"></span></h1>
+              <h1 class="card__title">Penci<span class="no-letter-spacing">l</span></h1>
             </div>
           </a>
 
-          <a href="product3_9.html" id="" class="card">
+          <a href="product1_9.html" id="product1_9" class="card">
             <div class="card__cover">
-              <h1 class="card__title"><span class="no-letter-spacing"></span></h1>
+              <h1 class="card__title">Came<span class="no-letter-spacing">l</span> To<span class="no-letter-spacing">e</span></h1>
             </div>
           </a>
         </section>

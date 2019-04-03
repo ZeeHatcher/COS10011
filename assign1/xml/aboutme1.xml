@@ -35,8 +35,8 @@
     <section>
       <table class="modern-table" id="student__contrib">
         <tr class="modern-table__row">
-          <th class="modern-table__header">Page</th>
-          <th class="modern-table__header">Contribs.</th>
+          <th class="modern-table__header"><h4>Page</h4></th>
+          <th class="modern-table__header"><h4>Contribs.</h4></th>
         </tr>
 
         <tr class="modern-table__row">

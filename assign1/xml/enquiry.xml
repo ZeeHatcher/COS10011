@@ -68,10 +68,10 @@
   </nav>
 
   <main>
-    <form action="#">
+    <form action="">
       <fieldset>
         <legend>
-          >Persona<span class="no-letter-spacing">l</span>
+          <h3>Persona<span class="no-letter-spacing">l</span></h3>
         </legend>
 
         <div class="form__grid">
@@ -95,7 +95,7 @@
 
       <fieldset>
         <legend>
-          Addres<span class="no-letter-spacing">s</span>
+          <h3>Addres<span class="no-letter-spacing">s</span></h3>
         </legend>
 
         <div class="form__grid">
@@ -106,7 +106,7 @@
           <input id="city" name="city" type="text" maxlength="20" required="required" />
 
           <label for="state">State: </label>
-          <select name="state" id="state" size="16" required="required">
+          <select name="state" id="state" required="required">
             <optgroup label="East Malaysia">
               <option value="sabah">Sabah</option>
               <option value="sarawak" selected="selected">Sarawak</option>
@@ -137,12 +137,12 @@
 
       <fieldset>
         <legend>
-          Product<span class="no-letter-spacing">s</span>
+          <h3>Product<span class="no-letter-spacing">s</span></h3>
         </legend>
 
         <div class="form__grid">
           <label for="product-code">Product Code: </label>
-          <select name="product-code" id="product-code" size="27" required="required">
+          <select name="product-code" id="product-code" required="required">
             <optgroup label="Snowboards">
               <option value="">PLC012</option>
             </optgroup>

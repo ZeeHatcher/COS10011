@@ -71,6 +71,40 @@
      background-image: url("images/product1_9.jpg"); /* https://www.evo.com/snowboards/bataleon-camel-toe-snowboard */
    }
 
+   #product2_1 {
+     background-image: url("images/product2_1.jpg"); /* https://images.evo.com/imgp/700/139063/589752/clone.jpg */
+   }
+
+   #product2_2 {
+     background-image: url("images/product2_2.jpg"); /* https://images.evo.com/imgp/700/157650/624760/clone.jpg */
+   }
+
+   #product2_3 {
+     background-image: url("images/product2_3.jpg"); /* https://images.evo.com/imgp/700/138381/571149/clone.jpg */
+   }
+   #product2_4 {
+     background-image: url("images/product2_4.jpg"); /* https://images.evo.com/imgp/700/122168/490097/black-crows-daemon-birdie-skis-women-s-2019-157.jpg */
+   }
+
+   #product2_5 {
+     background-image: url("images/product2_5.jpg"); /* https://images.evo.com/imgp/700/138565/589855/rmu-valhalla-104-skis-women-s-2019-162.jpg */
+   }
+   #product2_6 {
+     background-image: url("images/product2_6.jpg"); /* https://images.evo.com/imgp/700/138608/595473/clone.jpg */
+   }
+
+   #product2_7 {
+     background-image: url("images/product2_7.jpg"); /* https://images.evo.com/imgp/700/142266/592971/clone.jpg */
+   }
+
+   #product2_8 {
+     background-image: url("images/product2_8.jpg"); /* https://images.evo.com/imgp/700/138905/574706/lib-tech-wreckcreate-110-skis-2019-171.jpg */
+   }
+
+   #product2_9 {
+     background-image: url("images/product2_9.jpg"); /* https://images.evo.com/imgp/700/138277/567895/line-skis-pandora-104-skis-women-s-2019-158.jpg */
+   }
+
 /* **************************************************
     Utility CSS
    ************************************************** */

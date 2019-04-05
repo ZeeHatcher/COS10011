@@ -105,6 +105,34 @@
      background-image: url("images/product2_9.jpg"); /* https://images.evo.com/imgp/700/138277/567895/line-skis-pandora-104-skis-women-s-2019-158.jpg */
    }
 
+   #product3_1 {
+     background-image: url("images/product3_1.jpg"); /* https://www.camp-usa.com/outdoor/wp-content/uploads/2015/12/2392-MINIMA-1-SL-16-650x650.jpg */
+   }
+
+   #product3_2 {
+     background-image: url("images/product3_2.jpg"); /* https://www.camp-usa.com/outdoor/wp-content/uploads/2015/12/2393-MINIMA-2-SL-16-650x650.jpg */
+   }
+
+   #product3_3 {
+     background-image: url("images/product3_3.jpg"); /* https://www.camp-usa.com/outdoor/wp-content/uploads/2015/12/2394-MINIMA-3-SL-16-650x650.jpg */
+   }
+
+   #product3_1, #product3_2, #product3_3 {
+     height: 300px;
+   }
+
+   #product3_4 {
+     background-image: url("images/product3_4.jpg"); /* https://www.camp-usa.com/outdoor/wp-content/uploads/2018/01/2536-Eghen35-768x768.jpg */
+   }
+
+   #product3_5 {
+     background-image: url("images/product3_5.jpg"); /* https://www.camp-usa.com/outdoor/wp-content/uploads/2014/12/0275-2-M4-ORANGE-151-650x650.jpg */
+   }
+
+   #product3_6 {
+     background-image: url("images/product3_6.jpg"); /* https://www.camp-usa.com/outdoor/wp-content/uploads/2018/01/2571-768x768.jpg */
+   }
+
 /* **************************************************
     Utility CSS
    ************************************************** */
@@ -475,6 +503,12 @@ input:focus, textarea:focus {
   color: #111;
 }
 
+.bullet::before {
+  content: "|";
+  opacity: 0.2;
+  margin-right: 1em;
+}
+
 .card {
   display: block;
   border: 2px solid #111;
@@ -608,8 +642,8 @@ footer.student {
 }
 
 .hero {
-  min-height: 60vh;
-  height: auto;
+  min-height: 500px;
+  height: 60vh;
   margin: 25px 0;
   width: 100%;
   overflow: hidden;
@@ -628,6 +662,7 @@ footer.student {
 
 .hero__img {
   width: 100%;
+  min-height: 500px;
   height: 100%;
   object-fit: cover;
 }
@@ -635,6 +670,7 @@ footer.student {
 .hero__textbox {
   background-color: #111;
   padding: 75px;
+  min-height: 500px;
   padding-bottom: 100px;
   position: relative;
 }
@@ -721,6 +757,10 @@ main.student {
 .product__property {
   color: #b6e2ff;
   margin-top: 1em;
+}
+
+.product__value li {
+  margin-top: 0.3em;
 }
 
 .seperator {

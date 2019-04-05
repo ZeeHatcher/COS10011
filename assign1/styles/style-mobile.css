@@ -16,6 +16,11 @@
     margin-top: 50px;
   }
 
+  .bullet::before {
+    content: "";
+    margin: 0;
+  }
+
   .card {
     width: 80%;
     height: 300px;

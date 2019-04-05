@@ -71,7 +71,7 @@
     <form action="#">
       <fieldset>
         <legend>
-          >Persona<span class="no-letter-spacing">l</span>
+          Persona<span class="no-letter-spacing">l</span>
         </legend>
 
         <div class="form__grid">
@@ -106,10 +106,12 @@
           <input id="city" name="city" type="text" maxlength="20" required="required" />
 
           <label for="state">State: </label>
-          <select name="state" id="state" size="16" required="required">
+          <select name="state" id="state" size="1" required="required">
+            <option value="">State</option>
+
             <optgroup label="East Malaysia">
               <option value="sabah">Sabah</option>
-              <option value="sarawak" selected="selected">Sarawak</option>
+              <option value="sarawak">Sarawak</option>
               <option value="labuan">Labuan</option>
             </optgroup>
 
@@ -142,13 +144,31 @@
 
         <div class="form__grid">
           <label for="product-code">Product Code: </label>
-          <select name="product-code" id="product-code" size="27" required="required">
+          <select name="product-code" id="product-code" size="1" required="required">
+            <option value="">Product Code</option>
+
             <optgroup label="Snowboards">
-              <option value="">PLC012</option>
+              <option value="sb-am1">SB-AM01</option>
+              <option value="sb-am2">SB-AM02</option>
+              <option value="sb-am3">SB-AM03</option>
+              <option value="sb-fs1">SB-FS01</option>
+              <option value="sb-fs2">SB-FS02</option>
+              <option value="sb-fs3">SB-FS03</option>
+              <option value="sb-pw1">SB-PW01</option>
+              <option value="sb-pw2">SB-PW02</option>
+              <option value="sb-pw3">SB-PW03</option>
             </optgroup>
 
             <optgroup label="Skis">
-              <option value="">PLC012</option>
+              <option value="sk-am1">SK-AM01</option>
+              <option value="sk-am2">SK-AM02</option>
+              <option value="sk-am3">SK-AM03</option>
+              <option value="sk-fr1">SK-FR01</option>
+              <option value="sk-fr2">SK-FR02</option>
+              <option value="sk-fr3">SK-FR03</option>
+              <option value="sk-pw1">SK-PW01</option>
+              <option value="sk-pw2">SK-PW02</option>
+              <option value="sk-pw3">SK-PW03</option>
             </optgroup>
 
             <optgroup label="Camping">

@@ -67,6 +67,7 @@
 
   <main>
     <section class="grid">
+      <h2 class="h__title">Products</h2>
       <aside class="ctgry">
         <h3 class="ctgry__title">Categories</h3>
 
@@ -78,6 +79,7 @@
       </aside>
 
       <section id="display_1" class="display">
+        <h2 class="h__title">Product</h2>
         <article class="desc">
           <h3 class="desc__title">All-Mountain</h3>
 
@@ -112,6 +114,7 @@
       </section>
 
       <section id="display_2" class="display">
+        <h2 class="h__title">Product</h2>
         <article class="desc">
           <h3 class="desc__title">Freestyle</h3>
 
@@ -146,6 +149,7 @@
       </section>
 
       <section id="display_3" class="display">
+        <h2 class="h__title">Product</h2>
         <article class="desc">
           <h3 class="desc__title">Powder</h3>
 

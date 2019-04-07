@@ -760,6 +760,10 @@ footer.student {
   margin-bottom: 15px;
 }
 
+.h__title {
+  display: none;
+}
+
 .hero {
   min-height: 500px;
   height: 60vh;

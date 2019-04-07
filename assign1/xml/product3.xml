@@ -67,6 +67,7 @@
 
   <main>
     <section class="grid">
+      <h2 class="h__title">Products</h2>
       <aside class="ctgry">
         <h3 class="ctgry__title">Categories</h3>
 
@@ -77,10 +78,19 @@
       </aside>
 
       <section id="display_1" class="display">
+        <h2 class="h__title">Product</h2>
         <article class="desc">
           <h3 class="desc__title">Tents</h3>
 
-          <p class="desc__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p class="desc__text">
+            When you're camping in the snow, you're going to need a tent that can withstand the harsh cold weather. These tents are designed to be wet-resistant and durable so that you may camp knowing that you'll be safe and sound. They are also lightweight so that you won't be overencumbered when trekking towards your camp site. There are 3 different types with different sizes.
+          </p>
+
+          <ol class="desc__list">
+            <li>The small-sized Minima 1 for 1 person</li>
+            <li>The medium-sized Minima 2 for 2 people</li>
+            <li>The large-sized Minima 3 for 3 people</li>
+          </ol>
         </article>
 
         <section class="cards items">
@@ -105,10 +115,13 @@
       </section>
 
       <section id="display_2" class="display">
+        <h2 class="h__title">Product</h2>
         <article class="desc">
           <h3 class="desc__title">Backpacks</h3>
 
-          <p class="desc__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p class="desc__text">
+            When it comes to snow camping, there are quite a number of equipment that you are required to bring together with you on your trip. Thus, a decently-sized backpack is required in order to store all those items. They also need to be manufactured to be durable and resistant to the cold, harsh conditions during camping. We provide various backpacks that fit those criteria and some more. These backpacks will do well for any camper, from beginner to veteran. Take your pick!
+          </p>
         </article>
 
         <section class="cards items">

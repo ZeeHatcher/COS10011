@@ -30,25 +30,58 @@
       <p id="student__id">101215944</p>
 
       <div id="student__photo">
-        <img src="images/aboutme3.jpeg" alt="Karyn Chong"/>
+        <img src="images/aboutme3.jpg" alt="Karyn Chong"/>
       </div>
     </section>
 
     <section>
+      <h2 class="h__title">Student</h2>
       <table class="modern-table" id="student__contrib">
         <tr class="modern-table__row">
-          <th class="modern-table__header">Page</th>
           <th class="modern-table__header">Contribs.</th>
+          <th class="modern-table__header">Details</th>
         </tr>
 
         <tr class="modern-table__row">
-          <td class="modern-table__item">placeholder.html</td>
-          <td class="modern-table__item">Details</td>
+          <td class="modern-table__item">Design</td>
+          <td class="modern-table__item">
+            <ul>
+              <li class="bullet">Compile ideas and create sample designs with Adobe Illustrator</li>
+              <li class="bullet">Design Glacier logo</li>
+            </ul>
+          </td>
         </tr>
 
         <tr class="modern-table__row">
-          <td class="modern-table__item">placeholder.html</td>
-          <td class="modern-table__item">Details</td>
+          <td class="modern-table__item">HTML</td>
+          <td class="modern-table__item">
+            <ul>
+              <li class="bullet">Structure for product*.html</li>
+              <li class="bullet">Structure for product*_*.html</li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr class="modern-table__row">
+          <td class="modern-table__item">CSS</td>
+          <td class="modern-table__item">
+            <ul>
+              <li class="bullet">Styles for product*.html</li>
+              <li class="bullet">Styles for product*_*.html</li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr class="modern-table__row">
+          <td class="modern-table__item">Content</td>
+          <td class="modern-table__item">
+            <ul>
+              <li class="bullet">Images and info for product2.html</li>
+              <li class="bullet">Images and info for product2_*.html</li>
+              <li class="bullet">Photos for aboutme*.html</li>
+              <li class="bullet">Editing images to appropriate resolutions</li>
+            </ul>
+          </td>
         </tr>
       </table>
     </section>
@@ -59,6 +92,7 @@
       </div>
 
       <article id="student__misc">
+        <h2 class="h__title">Additional Info</h2>
         <p class="student__chars">
           <span class="student__property">Hometown:</span> Kuala Lumpur
         </p>

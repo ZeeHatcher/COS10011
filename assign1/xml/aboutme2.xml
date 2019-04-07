@@ -17,20 +17,20 @@
 <body>
   <nav id="studentnav">
     <ul class="studentnav__items">
-      <li class="studentnav__item studentnav__item--active"><a class="studentnav__link" href="aboutme1.html"><h3>Ian Ong</h3></a></li>
-      <li class="studentnav__item"><a class="studentnav__link" href="aboutme2.html"><h3>Jonathan Seng</h3></a></li>
+      <li class="studentnav__item"><a class="studentnav__link" href="aboutme1.html"><h3>Ian Ong</h3></a></li>
+      <li class="studentnav__item studentnav__item--active"><a class="studentnav__link" href="aboutme2.html"><h3>Jonathan Seng</h3></a></li>
       <li class="studentnav__item"><a class="studentnav__link" href="aboutme3.html"><h3>Karyn Chong</h3></a></li>
     </ul>
   </nav>
 
   <main class="student">
     <section id="student__info">
-      <h3 id="student__name">Ian Ong</h3>
+      <h3 id="student__name">Jonathan Seng</h3>
       <p id="student__course">Bachelor Of Computer Science</p>
-      <p id="student__id">0123456789</p>
+      <p id="student__id">101211476</p>
 
       <div id="student__photo">
-        <img src="images/aboutme1.jpeg" alt="Ian Ong"/>
+        <img src="images/aboutme2.jpeg" alt="Jonathan Seng"/>
       </div>
     </section>
 
@@ -60,7 +60,7 @@
 
       <article id="student__misc">
         <p class="student__chars">
-          <span class="student__property">Hometown:</span> Sibu
+          <span class="student__property">Hometown:</span> Kuching
         </p>
 
         <p class="student__chars">
@@ -68,7 +68,7 @@
         </p>
 
         <p class="student__chars">
-          <span class="student__property">Hobbies:</span> Playing games
+          <span class="student__property">Hobbies:</span> Swimming
         </p>
       </article>
     </section>
@@ -76,7 +76,7 @@
 
   <footer class="student is-pos-bottom is-pos-x-center">
     <p id="student__email">
-      Email: <a class="link-underline" href="mailto:ian11ong90@gmail.com">ian11ong90@gmail.com</a>
+      Email: <a class="link-underline" href="mailto:jonathan.seng0810@gmail.com">jonathan.seng0810@gmail.com</a>
     </p>
 
     <a href="index.html" id="student__btn" class="btn">Back To Site</a>

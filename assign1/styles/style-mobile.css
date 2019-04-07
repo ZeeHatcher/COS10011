@@ -1,3 +1,9 @@
+/*
+Authors: Ian Ong, Jonathan Seng, Karyn Chong
+Description: COS10011 Assignment
+Date: 7 April 2019
+*/
+
 @media only screen and (max-width: 768px) {
   body { font-size: 14px; }
   h1 { font-size: 1.75em; }
@@ -19,6 +25,11 @@
   .bullet::before {
     content: "";
     margin: 0;
+  }
+
+  .modern-table .bullet::before {
+    content: "|";
+    margin-right: 1em;
   }
 
   .card {
@@ -80,6 +91,20 @@
     margin-top: 25px;
   }
 
+  .enhancement__info img {
+    margin: 15px;
+  }
+
+  .enhancement__long {
+    width: 200px;
+    height: auto;
+  }
+
+  .enhancement__title {
+    font-size: 1.25em;
+    padding: 30px 15px;
+  }
+
   .footer__column {
     margin: 30px 30px;
   }
@@ -108,13 +133,15 @@
 
   .hero__img {
     width: 100%;
+    min-height: 0;
   }
 
   .hero__textbox {
     width: 100%;
+    min-height: 0;
     float: none;
     padding: 25px;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
     text-align: center;
     height: auto;
   }
@@ -176,9 +203,19 @@
     width: 100%;
   }
 
+  #student__info {
+    padding: 0 25px;
+  }
+
+  #student__misc {
+    padding: 25px;
+  }
+
   #student__photo {
     width: 200px;
     height: 267px;
+    float: none;
+    margin: auto;
   }
 
   #studentnav {

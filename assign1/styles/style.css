@@ -1,9 +1,80 @@
-/* Colors
-#111
-#1c1c1c
-#fff
-#b6e2ff
+/*
+Authors: Ian Ong, Jonathan Seng, Karyn Chong
+Description: COS10011 Assignment
+Date: 7 April 2019
 */
+
+
+
+/* **************************************************
+    About this file
+   **************************************************
+    This file was made for the completion of an
+    assignment in COS10011 - Creating Web Applicatios
+
+    If there are any problems, please contact:
+    jonathan.seng0810@gmail.com
+
+
+    Additional information:
+
+      - The CSS in this file are categorized into
+        5 groups.
+        - Card Backgrounds:
+            CSS for background-image
+
+        - Utility CSS:
+            CSS that can be used anywhere for
+            quick changes
+
+        - Global CSS:
+            CSS applied to element tags directly
+
+        - Header, Navbar, Footer, Disclaimer CSS:
+            CSS styling that is present throughout
+            all/most web pages
+
+        - Others
+            Any other CSS styling not in the
+            categories above
+
+
+      - The CSS is arranged alphabetically according
+        to the "targeted element" (or at least we try to)
+        eg: ".parent .target" is under T, not P
+
+
+      - The BEM naming scheme is used to name the
+        CSS selectors (or at least we try to)
+        Reference: www.getbem.com
+
+   ************************************************** */
+
+
+
+/* **************************************************
+    Colors
+   **************************************************
+   #111 - Dark Grey
+   #1c1c1c - Light Grey
+   #fff  - White
+   #b6e2ff - Ice Blue
+
+   Feel free to change up the colours to your desire.
+   Here are the steps if you don't know:
+   1) CTRL+F to open the Find menu
+   2) Put the colour you want changed inside the
+      first input
+   3) Put the colour you want to change into inside
+      second input
+   4) Press Replace All, or spam the Replace button
+
+   If you don't have such a feature, then good luck,
+   I guess?
+
+   ************************************************** */
+
+
 
 /* **************************************************
     Card Backgrounds
@@ -133,6 +204,8 @@
      background-image: url("images/product3_6.jpg"); /* https://www.camp-usa.com/outdoor/wp-content/uploads/2018/01/2571-768x768.jpg */
    }
 
+
+
 /* **************************************************
     Utility CSS
    ************************************************** */
@@ -176,6 +249,8 @@
 .text-accent {
   color: #b6e2ff;
 }
+
+
 
 /* **************************************************
     Global CSS
@@ -242,6 +317,13 @@ h4 {
   letter-spacing: 0.25em;
 }
 
+hr {
+  clear: both;
+  width: 33%;
+  margin: auto;
+  opacity: 0.2;
+}
+
 legend {
   padding: 0 1em;
   color: #b6e2ff;
@@ -249,6 +331,10 @@ legend {
 
 li {
   list-style: none;
+}
+
+ol li {
+  list-style-type: lower-latin;
 }
 
 optgroup {
@@ -286,6 +372,8 @@ input, textarea, select {
 input:focus, textarea:focus {
   border-bottom: solid 1px #b6e2ff;
 }
+
+
 
 /* **************************************************
     Header, Navbar, Footer, Disclaimer CSS
@@ -474,6 +562,8 @@ input:focus, textarea:focus {
   color: #111;
 }
 
+
+
 /* **************************************************
     Others
    ************************************************** */
@@ -589,6 +679,10 @@ input:focus, textarea:focus {
   padding: 25px 100px;
 }
 
+.desc__list {
+  margin-top: 25px;
+}
+
 .desc__text {
   margin-top: 25px;
 }
@@ -604,6 +698,27 @@ input:focus, textarea:focus {
 
 #email {
   max-width: 250px;
+}
+
+.enhancement__info {
+  clear: both;
+}
+
+.enhancement__short {
+  width: 200px;
+}
+
+.enhancement__long {
+  height: 200px;
+}
+
+.enhancement__title {
+  text-align: center;
+  padding: 50px;
+  margin-bottom: 25px;
+  background-color: #111;
+  color: #b6e2ff;
+  font-weight: 700;
 }
 
 footer.student {
@@ -641,6 +756,10 @@ footer.student {
   grid-template-columns: 250px auto;
 }
 
+.enhancement__info h2 {
+  margin-bottom: 15px;
+}
+
 .hero {
   min-height: 500px;
   height: 60vh;
@@ -673,6 +792,25 @@ footer.student {
   min-height: 500px;
   padding-bottom: 100px;
   position: relative;
+}
+
+#student__photo img {
+  width: 100%;
+  position: relative;
+  top: 10px;
+}
+
+.enhancement__info img {
+  margin: 50px;
+  border: solid 2px #111;
+}
+
+.enhancement__info:nth-child(odd) img {
+  float: left;
+}
+
+.enhancement__info:nth-child(even) img {
+  float: right;
 }
 
 .info {
@@ -730,11 +868,8 @@ main.student {
   border-right: 5px solid #111;
 }
 
-.placeholder {
-  height: 400px;
-  width: 250px;
-  border: solid 2px #111;
-  margin: auto;
+.enhancement__info p {
+  margin-bottom: 25px;
 }
 
 #postcode {
@@ -809,6 +944,10 @@ main.student {
   font-family: "Arial", sans-serif;
   opacity: 0.5;
   letter-spacing: 0.25em;
+}
+
+#student__info {
+  padding: 0 50px;
 }
 
 #student__misc {

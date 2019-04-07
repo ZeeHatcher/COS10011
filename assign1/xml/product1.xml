@@ -93,19 +93,19 @@
         <section class="cards items">
           <a href="product1_1.html" id="product1_1" class="card">
             <div class="card__cover">
-              <h1 class="card__title">Col<span class="no-letter-spacing">d</span> Bre<span class="no-letter-spacing">w</span> C<span class="no-letter-spacing">2</span></h1>
+              <h2 class="card__title">Col<span class="no-letter-spacing">d</span> Bre<span class="no-letter-spacing">w</span> C<span class="no-letter-spacing">2</span></h2>
             </div>
           </a>
 
           <a href="product1_2.html" id="product1_2" class="card">
             <div class="card__cover">
-              <h1 class="card__title">Maveric<span class="no-letter-spacing">k</span></h1>
+              <h2 class="card__title">Maveric<span class="no-letter-spacing">k</span></h2>
             </div>
           </a>
 
           <a href="product1_3.html" id="product1_3" class="card">
             <div class="card__cover">
-              <h1 class="card__title">Merak<span class="no-letter-spacing">i</span></h1>
+              <h2 class="card__title">Merak<span class="no-letter-spacing">i</span></h2>
             </div>
           </a>
         </section>
@@ -127,19 +127,19 @@
         <section class="cards items">
           <a href="product1_4.html" id="product1_4" class="card">
             <div class="card__cover">
-              <h1 class="card__title">K<span class="no-letter-spacing">2</span> Raygu<span class="no-letter-spacing">n</span></h1>
+              <h2 class="card__title">Raygu<span class="no-letter-spacing">n</span></h2>
             </div>
           </a>
 
           <a href="product1_5.html" id="product1_5" class="card">
             <div class="card__cover">
-              <h1 class="card__title">Venu<span class="no-letter-spacing">s</span></h1>
+              <h2 class="card__title">Venu<span class="no-letter-spacing">s</span></h2>
             </div>
           </a>
 
           <a href="product1_6.html" id="product1_6" class="card">
             <div class="card__cover">
-              <h1 class="card__title">Klass<span class="no-letter-spacing">y</span> C2<span class="no-letter-spacing">X</span></h1>
+              <h2 class="card__title">Klass<span class="no-letter-spacing">y</span> C2<span class="no-letter-spacing">X</span></h2>
             </div>
           </a>
         </section>
@@ -161,19 +161,19 @@
         <section class="cards items">
           <a href="product1_7.html" id="product1_7" class="card">
             <div class="card__cover">
-              <h1 class="card__title">Pik<span class="no-letter-spacing">e</span></h1>
+              <h2 class="card__title">Pik<span class="no-letter-spacing">e</span></h2>
             </div>
           </a>
 
           <a href="product1_8.html" id="product1_8" class="card">
             <div class="card__cover">
-              <h1 class="card__title">Penci<span class="no-letter-spacing">l</span></h1>
+              <h2 class="card__title">Penci<span class="no-letter-spacing">l</span></h2>
             </div>
           </a>
 
           <a href="product1_9.html" id="product1_9" class="card">
             <div class="card__cover">
-              <h1 class="card__title">Came<span class="no-letter-spacing">l</span> To<span class="no-letter-spacing">e</span></h1>
+              <h2 class="card__title">Came<span class="no-letter-spacing">l</span> To<span class="no-letter-spacing">e</span></h2>
             </div>
           </a>
         </section>

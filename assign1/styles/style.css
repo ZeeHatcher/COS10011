@@ -889,6 +889,11 @@ main.student {
   overflow: hidden;
 }
 
+.product__btn {
+  margin-top: 50px;
+  display: inline-block;
+}
+
 .product__img {
   margin: 0 100px 25px 0;
 }
@@ -914,6 +919,15 @@ main.student {
   display: inline;
   padding: 0 50px;
   text-align: center;
+}
+
+#subject {
+  width: 200px;
+  cursor: default;
+}
+
+#subject:focus {
+  border: none;
 }
 
 #student__additional {

@@ -14,9 +14,6 @@
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="styles/style.css" />
   <link rel="stylesheet" type="text/css" href="styles/style-mobile.css"/>
-
-  <!-- JS -->
-  <script src="script/animation.js"></script>
 </head>
 
 <body>
@@ -181,6 +178,9 @@
             </optgroup>
           </select>
 
+          <label for="subject">Subject: </label>
+          <input type="text" id="subject" name="subject" value="" readonly="readonly"/>
+
           <label for="duration">Rental Duration: </label>
           <div>
             <input id="duration" name="duration" type="number" min="0" required="required" />
@@ -234,6 +234,10 @@
       <img class="footer__logo" src="images/company_logo_small.png" alt="Glacier Logo" />
     </figure>
   </footer>
+
+  <!-- JS -->
+  <script src="script/animation.js"></script>
+  <script src="script/script.js"></script>
 </body>
 
 </html>

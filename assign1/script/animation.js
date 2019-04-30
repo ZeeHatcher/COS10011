@@ -4,7 +4,7 @@ window.onload = function() {
   var nav = document.getElementById("nav");
 
   function toggleNav() {
-    toggled = nav.style.display == "block";
+    var toggled = nav.style.display == "block";
 
     if (toggled) {
       nav.style.display = "none";

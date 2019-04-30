@@ -74,18 +74,18 @@
         <div class="form__grid">
           <label for="name">Name: </label>
           <div>
-            <input id="name" name="first_name" type="text" placeholder="First Name" maxlength="25" pattern="^[A-Za-z]+$" required="required" />
-            <input name="last_name" type="text" placeholder="Last Name" maxlength="25" pattern="^[A-Za-z]+$" required="required" />
+            <input id="name" name="first_name" type="text" placeholder="First Name" />
+            <input name="last_name" type="text" placeholder="Last Name" />
           </div>
 
           <label for="email">Email Address: </label>
-          <input id="email" name="email" type="email" placeholder="youremail@email.com" required="required" />
+          <input id="email" name="email" type="text" placeholder="youremail@email.com" />
 
           <label for="tele">Telephone Number: </label>
           <div>
-            <input id="tele" name="tele_front" type="text" maxlength="3" size="1" placeholder="012" pattern="^d+$" required="required" />
+            <input id="tele" name="tele_front" type="text" size="1" placeholder="012" />
             <span class="form__col-2">-</span>
-            <input name="tele_back" type="text" maxlength="7" size="7" placeholder="3456789" pattern="^d+$" required="required"/>
+            <input name="tele_back" type="text" size="7" placeholder="3456789" />
           </div>
         </div>
       </fieldset>
@@ -97,13 +97,13 @@
 
         <div class="form__grid">
           <label for="street">Street Address: </label>
-          <input id="street" name="street_address" type="text" maxlength="40" required="required" />
+          <input id="street" name="street_address" type="text" />
 
           <label for="city">City/Town: </label>
-          <input id="city" name="city" type="text" maxlength="20" required="required" />
+          <input id="city" name="city" type="text" />
 
           <label for="state">State: </label>
-          <select name="state" id="state" size="1" required="required">
+          <select name="state" id="state" size="1">
             <option value="">State</option>
 
             <optgroup label="East Malaysia">
@@ -130,7 +130,7 @@
           </select>
 
           <label for="postcode">Postcode: </label>
-          <input id="postcode" name="postcode" type="text" maxlength="5" pattern="^d+$" required="required" />
+          <input id="postcode" name="postcode" type="text" />
         </div>
       </fieldset>
 
@@ -141,7 +141,7 @@
 
         <div class="form__grid">
           <label for="product-code">Product Code: </label>
-          <select name="product-code" id="product-code" size="1" required="required">
+          <select name="product-code" id="product-code" size="1">
             <option value="">Product Code</option>
 
             <optgroup label="Snowboards">
@@ -183,7 +183,7 @@
 
           <label for="duration">Rental Duration: </label>
           <div>
-            <input id="duration" name="duration" type="number" min="0" required="required" />
+            <input id="duration" name="duration" type="text" size="2" />
             <span class="form__col-2">week(s)</span>
           </div>
 
@@ -193,8 +193,8 @@
       </fieldset>
 
       <div class="form__btns">
-        <input class="btn form__btn" type="reset" value="Reset"/>
-        <input class="btn form__btn" type="submit" value="Submit"/>
+        <input id="btn-reset" class="btn form__btn" type="reset" value="Reset" />
+        <input id="btn-submit" class="btn form__btn" type="submit" value="Submit" />
       </div>
     </form>
   </main>

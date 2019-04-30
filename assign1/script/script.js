@@ -36,6 +36,8 @@ if (sPage == "enquiry.html") {
       if (sessionStorage.productCode == listProducts[i].code) {
         formRent["subject"].value = listProducts[i].name;
         break;
+      } else {
+        formRent["subject"].value = "";
       }
     }
   }
@@ -67,6 +69,97 @@ if (sPage == "enquiry.html") {
   });
 
   // Data Validation And Input Checking Of Forms
+  function check_length(input, max = Infinity, min = 0) {
+    return (input.value.length > min && input.value.length <= max);
+  }
+
+  function check_pattern(input, pattern) {
+    return (input.value.match(pattern))
+  }
+
+  function check_selected(input) {
+    for (var i = 1; i < input.length; i++) {
+      if (input[i].selected) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  function check_fields() {
+    var msgError = "";
+
+    checkFirstName = check_length(formRent["first_name"], 25) && check_pattern(formRent["first_name"], "^[A-Za-z]+$");
+    if (!checkFirstName) {
+      msgError += "Please enter a valid First Name.\n";
+    }
+
+    checkLastName = check_length(formRent["last_name"], 25) && check_pattern(formRent["last_name"], "^[A-Za-z]+$");
+    if (!checkLastName) {
+      msgError += "Please enter a valid Last Name.\n";
+    }
+
+    checkEmail = check_length(formRent["email"]) && check_pattern(formRent["email"], "^[A-Za-z0-9]+@[a-z](.com)");
+    if (!checkEmail) {
+      msgError += "Please enter a valid Email Address.\n";
+    }
+
+    checkTeleFront = check_length(formRent["tele_front"], 3, 2) && check_pattern(formRent["tele_front"], "^[0-9]+$");
+    checkTeleBack = check_length(formRent["tele_back"], 7) && check_pattern(formRent["tele_back"], "^[0-9]+$");
+    if (!(checkTeleFront && checkTeleBack)) {
+      msgError += "Please enter a valid Telephone Number.\n";
+    }
+
+    checkStreet = check_length(formRent["street_address"], 40);
+    if (!checkStreet) {
+      msgError += "Please enter a valid Street Address.\n";
+    }
+
+    checkCity = check_length(formRent["city"], 20);
+    if (!checkCity) {
+      msgError += "Please enter a valid City/Town.\n"
+    }
+
+    checkState = check_selected(formRent["state"]);
+    if (!checkState) {
+      msgError += "Please choose a State.\n";
+    }
+
+    checkPostcode = check_length(formRent["postcode"], 5, 4) && check_pattern(formRent["postcode"], "^[0-9]+$");
+    if (!checkPostcode) {
+      msgError += "Please enter a valid Postcode.\n";
+    }
+
+    checkProduct = check_selected(formRent["product-code"]);
+    if (!checkProduct) {
+      msgError += "Please choose a Product Code.\n";
+    }
+
+    checkSubject = check_length(formRent["subject"]);
+    if (!checkSubject) {
+      msgError += "Please enter a Subject.\n";
+    }
+
+    checkDuration = check_pattern(formRent["duration"], "^[0-9]+$");
+    if (!checkDuration) {
+      msgError += "Please enter a valid Duration.";
+    }
+
+    return msgError;
+  }
+
+  formRent.addEventListener("submit", function(event) {
+    event.preventDefault();
+    msgError = check_fields();
+
+    if (msgError == "") {
+      console.log("SUBMIT");
+    } else {
+      alert(msgError);
+      return false;
+    }
+  });
 
 } else {
   var btnRent = document.getElementById("product-btn");

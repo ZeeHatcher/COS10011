@@ -817,6 +817,14 @@ footer.student {
   float: right;
 }
 
+#fullname {
+  width: 200px;
+}
+
+#fulltele {
+  width: 125px;
+}
+
 .info {
   padding: 25px 150px;
 }
@@ -839,6 +847,14 @@ footer.student {
 
 input.btn {
   background-color: transparent;
+}
+
+input[readonly="readonly"], textarea[readonly="readonly"] {
+  cursor: default;
+}
+
+input[readonly="readonly"]:focus, textarea[readonly="readonly"]:focus {
+  border: none;
 }
 
 main.student {
@@ -878,6 +894,10 @@ main.student {
 
 #postcode {
   width: 75px;
+}
+
+#product-code {
+  width: 150px;
 }
 
 .product {
@@ -923,11 +943,10 @@ main.student {
 
 #subject {
   width: 200px;
-  cursor: default;
 }
 
-#subject:focus {
-  border: none;
+#state {
+  width: 150px;
 }
 
 #student__additional {

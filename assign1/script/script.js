@@ -100,7 +100,7 @@ if (sPage == "enquiry.html") {
       msgError += "Please enter a valid Last Name.\n";
     }
 
-    checkEmail = check_length(formRent["email"]) && check_pattern(formRent["email"], "^[A-Za-z0-9]+@[a-z](.com)");
+    checkEmail = check_length(formRent["email"]) && check_pattern(formRent["email"], "^[A-Za-z0-9._]+@[a-z]+(.com)$");
     if (!checkEmail) {
       msgError += "Please enter a valid Email Address.\n";
     }
@@ -149,18 +149,75 @@ if (sPage == "enquiry.html") {
     return msgError;
   }
 
+  function set_sess() {
+    // Concatenate certain input fields
+    fullName = formRent["first_name"].value + " " + formRent["last_name"].value;
+    fullTele = formRent["tele_front"].value + "-" + formRent["tele_back"].value;
+
+    sessionStorage.userName = fullName;
+    sessionStorage.userEmail = formRent["email"].value;
+    sessionStorage.userTele = fullTele;
+    sessionStorage.userAddress = formRent["street_address"].value;
+    sessionStorage.userCity = formRent["city"].value;
+
+    for (var i = 1; i < formRent["state"].length; i++) {
+      var option = formRent["state"][i];
+      if (option.selected) {
+        sessionStorage.userState = option.innerHTML;
+        break;
+      }
+    }
+
+    sessionStorage.userPostcode = formRent["postcode"].value;
+
+    for (var i = 1; i < formRent["product-code"].length; i++) {
+      var option = formRent["product-code"][i];
+      if (option.selected) {
+        sessionStorage.productCode = option.innerHTML;
+        break;
+      }
+    }
+
+    sessionStorage.productSubject = formRent["subject"].value;
+    sessionStorage.productDuration = formRent["duration"].value;
+    sessionStorage.productComment = formRent["comments"].value;
+  }
+
   formRent.addEventListener("submit", function(event) {
     event.preventDefault();
-    msgError = check_fields();
+    var msgError = check_fields();
 
     if (msgError == "") {
       console.log("SUBMIT");
+      set_sess();
+      window.location = "confirmation.html";
     } else {
       alert(msgError);
-      return false;
     }
   });
 
+} else if (sPage == "confirmation.html") {
+  var confirmRent = document.forms["confirm-rent"];
+  var btnCancel = document.getElementById("btn-cancel");
+
+  confirmRent["fullname"].value = sessionStorage.userName;
+  confirmRent["email"].value = sessionStorage.userEmail;
+  confirmRent["fulltele"].value = sessionStorage.userTele;
+  confirmRent["street_address"].value = sessionStorage.userAddress;
+  confirmRent["city"].value = sessionStorage.userCity;
+  confirmRent["state"].value = sessionStorage.userState;
+  confirmRent["postcode"].value = sessionStorage.userPostcode;
+  confirmRent["product-code"].value = sessionStorage.productCode;
+  confirmRent["subject"].value = sessionStorage.productSubject;
+  confirmRent["duration"].value = sessionStorage.productDuration;
+  confirmRent["comments"].value = sessionStorage.productComment;
+
+  btnCancel.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    sessionStorage.clear();
+    window.location = "enquiry.html";
+  });
 } else {
   var btnRent = document.getElementById("product-btn");
 

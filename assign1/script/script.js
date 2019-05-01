@@ -2,7 +2,7 @@ var sPath = window.location.pathname;
 var sPage = sPath.substring(sPath.lastIndexOf("/") + 1);
 
 if (sPage == "enquiry.html") {
-  var listProducts = [
+  var productSnowboards = [
     {code: "SB-AM01", name: "Lib Tech Cold Brew C2"},
     {code: "SB-AM02", name: "Endeavor Maverick"},
     {code: "SB-AM03", name: "Rossignol Meraki"},
@@ -11,7 +11,10 @@ if (sPage == "enquiry.html") {
     {code: "SB-FS03", name: "GNU Klassy C2X"},
     {code: "SB-PW01", name: "Deus Powder Tools Pike"},
     {code: "SB-PW02", name: "Korua Shapes Pencil"},
-    {code: "SB-PW03", name: "Bataleon Camel Toe"},
+    {code: "SB-PW03", name: "Bataleon Camel Toe"}
+  ];
+
+  var productSkis = [
     {code: "SK-AM01", name: "Fischer Ranger"},
     {code: "SK-AM02", name: "Nordica Enforcer"},
     {code: "SK-AM03", name: "K2 Indy"},
@@ -20,7 +23,10 @@ if (sPage == "enquiry.html") {
     {code: "SK-FR03", name: "Head Kore"},
     {code: "SK-PW01", name: "DPS Yvette Alchemist"},
     {code: "SK-PW02", name: "Lib Tech Wreckcreate"},
-    {code: "SK-PW03", name: "Line Skis Pandora"},
+    {code: "SK-PW03", name: "Line Skis Pandora"}
+  ];
+
+  var productCamping = [
     {code: "CP-TN01", name: "Minima 1 SL"},
     {code: "CP-TN02", name: "Minima 2 SL"},
     {code: "CP-TN03", name: "Minima 3 SL"},
@@ -28,18 +34,30 @@ if (sPage == "enquiry.html") {
     {code: "CP-BP02", name: "M4"},
     {code: "CP-BP03", name: "Snowset"}
   ];
+
+  var productCategories = [
+    {category: "Snowboards", products: productSnowboards},
+    {category: "Skis", products: productSkis},
+    {category: "Camping", products: productCamping}
+  ];
+
   var formRent = document.forms["form-rent"];
   var selectCodes = formRent["product-code"];
 
-  function update_subject() {
-    for (i in listProducts) {
-      if (sessionStorage.productCode == listProducts[i].code) {
-        formRent["subject"].value = listProducts[i].name;
-        break;
-      } else {
-        formRent["subject"].value = "";
+  function get_subject() {
+    for (var indexCategory in productCategories) {
+      var category = productCategories[indexCategory];
+
+      for (indexProduct in category.products) {
+        var product = category.products[indexProduct];
+
+        if (sessionStorage.productCode == product.code) {
+          return product.name;
+        }
       }
     }
+
+    return "";
   }
 
   function update_code() {
@@ -52,10 +70,48 @@ if (sPage == "enquiry.html") {
   }
 
   // Populate Drop-Down List Using JavaScript
+  function create_category(parentID) {
+    var parent = document.getElementById(parentID);
+
+    for (var indexCategory in productCategories) {
+      var categoryName = productCategories[indexCategory].category
+
+      var optgroupNew = document.createElement("optgroup");
+      optgroupNew.label = categoryName;
+      optgroupNew.id = categoryName.toLowerCase();
+
+      parent.appendChild(optgroupNew);
+    }
+  }
+
+  function create_options(category) {
+    var parent = document.getElementById(category.toLowerCase());
+
+    for (var indexCategory in productCategories) {
+      if (category == productCategories[indexCategory].category) {
+        products = productCategories[indexCategory].products
+
+        for (indexProduct in products) {
+          var product = products[indexProduct];
+
+          var optionNew = document.createElement("option");
+          optionNew.innerHTML = product.code;
+          optionNew.value = product.code.toLowerCase();
+
+          parent.appendChild(optionNew);
+        }
+      }
+    }
+  }
+
+  create_category("product-code");
+  create_options("Snowboards");
+  create_options("Skis");
+  create_options("Camping");
 
   // Data Transfer Between Web Pages
   update_code();
-  update_subject();
+  formRent["subject"].value = get_subject();
 
   // Data Transfer In The Same Page
   selectCodes.addEventListener("change", function() {
@@ -65,7 +121,7 @@ if (sPage == "enquiry.html") {
       }
     }
 
-    update_subject();
+    formRent["subject"].value = get_subject();
   });
 
   // Data Validation And Input Checking Of Forms

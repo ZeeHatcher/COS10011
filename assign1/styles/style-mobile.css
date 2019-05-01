@@ -91,6 +91,18 @@ Date: 7 April 2019
     margin-top: 25px;
   }
 
+  .enhancement__btn {
+    top: 10px;
+  }
+
+  .enhancement__btn--left {
+    left: 10px;
+  }
+
+  .enhancement__btn--right {
+    right: 10px;
+  }
+
   .enhancement__info img {
     margin: 15px;
   }

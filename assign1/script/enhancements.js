@@ -46,4 +46,53 @@ if (sPage == "product1.html" || sPage == "product2.html" || sPage == "product3.h
   }
 
   changeDisplay(0);
+} else if (sPage == "enquiry.html") {
+  // Preview page prior feedback form submission
+  function set_sess() {
+    // Concatenate certain input fields
+    fullName = formRent["first_name"].value + " " + formRent["last_name"].value;
+    fullTele = formRent["tele_front"].value + "-" + formRent["tele_back"].value;
+
+    sessionStorage.userName = fullName;
+    sessionStorage.userEmail = formRent["email"].value;
+    sessionStorage.userTele = fullTele;
+    sessionStorage.userAddress = formRent["street_address"].value;
+    sessionStorage.userCity = formRent["city"].value;
+
+    for (var i = 1; i < formRent["state"].length; i++) {
+      var option = formRent["state"][i];
+      if (option.selected) {
+        sessionStorage.userState = option.innerHTML;
+        break;
+      }
+    }
+
+    sessionStorage.userPostcode = formRent["postcode"].value;
+
+    for (var i = 1; i < formRent["product-code"].length; i++) {
+      var option = formRent["product-code"][i];
+      if (option.selected) {
+        sessionStorage.productCode = option.innerHTML;
+        break;
+      }
+    }
+
+    sessionStorage.productSubject = formRent["subject"].value;
+    sessionStorage.productDuration = formRent["duration"].value;
+    sessionStorage.productComment = formRent["comments"].value;
+  }
+} else if (sPage == "confirmation.html") {
+  var confirmRent = document.forms["confirm-rent"];
+
+  confirmRent["fullname"].value = sessionStorage.userName;
+  confirmRent["email"].value = sessionStorage.userEmail;
+  confirmRent["fulltele"].value = sessionStorage.userTele;
+  confirmRent["street_address"].value = sessionStorage.userAddress;
+  confirmRent["city"].value = sessionStorage.userCity;
+  confirmRent["state"].value = sessionStorage.userState;
+  confirmRent["postcode"].value = sessionStorage.userPostcode;
+  confirmRent["product-code"].value = sessionStorage.productCode;
+  confirmRent["subject"].value = sessionStorage.productSubject;
+  confirmRent["duration"].value = sessionStorage.productDuration;
+  confirmRent["comments"].value = sessionStorage.productComment;
 }

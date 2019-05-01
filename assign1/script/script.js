@@ -41,7 +41,7 @@ if (sPage == "enquiry.html") {
     {category: "Camping", products: productCamping}
   ];
 
-  var formRent = document.forms["form-rent"];
+  var formRent = document.forms["form-rent"]; // HTML Form Element
   var selectCodes = formRent["product-code"];
 
   function get_subject() {
@@ -146,6 +146,7 @@ if (sPage == "enquiry.html") {
   function check_fields() {
     var msgError = "";
 
+    // Check inputs using RegEx
     checkFirstName = check_length(formRent["first_name"], 25) && check_pattern(formRent["first_name"], "^[A-Za-z]+$");
     if (!checkFirstName) {
       msgError += "Please enter a valid First Name.\n";
@@ -205,40 +206,6 @@ if (sPage == "enquiry.html") {
     return msgError;
   }
 
-  function set_sess() {
-    // Concatenate certain input fields
-    fullName = formRent["first_name"].value + " " + formRent["last_name"].value;
-    fullTele = formRent["tele_front"].value + "-" + formRent["tele_back"].value;
-
-    sessionStorage.userName = fullName;
-    sessionStorage.userEmail = formRent["email"].value;
-    sessionStorage.userTele = fullTele;
-    sessionStorage.userAddress = formRent["street_address"].value;
-    sessionStorage.userCity = formRent["city"].value;
-
-    for (var i = 1; i < formRent["state"].length; i++) {
-      var option = formRent["state"][i];
-      if (option.selected) {
-        sessionStorage.userState = option.innerHTML;
-        break;
-      }
-    }
-
-    sessionStorage.userPostcode = formRent["postcode"].value;
-
-    for (var i = 1; i < formRent["product-code"].length; i++) {
-      var option = formRent["product-code"][i];
-      if (option.selected) {
-        sessionStorage.productCode = option.innerHTML;
-        break;
-      }
-    }
-
-    sessionStorage.productSubject = formRent["subject"].value;
-    sessionStorage.productDuration = formRent["duration"].value;
-    sessionStorage.productComment = formRent["comments"].value;
-  }
-
   formRent.addEventListener("submit", function(event) {
     event.preventDefault();
     var msgError = check_fields();
@@ -253,20 +220,8 @@ if (sPage == "enquiry.html") {
   });
 
 } else if (sPage == "confirmation.html") {
-  var confirmRent = document.forms["confirm-rent"];
+  // Cancel the current order and reset sessionStorage
   var btnCancel = document.getElementById("btn-cancel");
-
-  confirmRent["fullname"].value = sessionStorage.userName;
-  confirmRent["email"].value = sessionStorage.userEmail;
-  confirmRent["fulltele"].value = sessionStorage.userTele;
-  confirmRent["street_address"].value = sessionStorage.userAddress;
-  confirmRent["city"].value = sessionStorage.userCity;
-  confirmRent["state"].value = sessionStorage.userState;
-  confirmRent["postcode"].value = sessionStorage.userPostcode;
-  confirmRent["product-code"].value = sessionStorage.productCode;
-  confirmRent["subject"].value = sessionStorage.productSubject;
-  confirmRent["duration"].value = sessionStorage.productDuration;
-  confirmRent["comments"].value = sessionStorage.productComment;
 
   btnCancel.addEventListener("click", function(event) {
     event.preventDefault();
@@ -275,6 +230,7 @@ if (sPage == "enquiry.html") {
     window.location = "enquiry.html";
   });
 } else {
+  // Send product code and name from product*_*.html to enquiry.html
   var btnRent = document.getElementById("product-btn");
 
   function get_product_detail(target) {

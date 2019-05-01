@@ -700,6 +700,22 @@ input:focus, textarea:focus {
   max-width: 250px;
 }
 
+.enhancement__btn {
+  transition: 0.2s;
+}
+
+.enhancement__btn:hover {
+  color: #b6e2ff;
+}
+
+.enhancement__btn--left {
+  left: 50px;
+}
+
+.enhancement__btn--right {
+  right: 50px;
+}
+
 .enhancement__info {
   clear: both;
 }
@@ -719,6 +735,7 @@ input:focus, textarea:focus {
   background-color: #111;
   color: #b6e2ff;
   font-weight: 700;
+  position: relative;
 }
 
 footer.student {

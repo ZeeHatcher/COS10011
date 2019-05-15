@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>E N H A N C E M E N T S</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet"/>
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="styles/style.css"/>
+  <link rel="stylesheet" type="text/css" href="styles/style-mobile.css"/>
+</head>
+<body>
+  <h1 class="enhancement__title">
+    Enhancement<span class="no-letter-spacing">s</span>
+
+    <a href="enhancements2.php" class="enhancement__btn enhancement__btn--right is-pos-y-center">&#62;</a>
+  </h1>
+
+  <article class="info enhancement__info">
+    <img class="enhancement__short" src="images/enhancement1.jpg" alt="Mobile-view CSS"/>
+
+    <h2 class="text-accent">Mobile-view CSS</h2>
+
+    <p>
+      In addition to the "style.css" that was specified as a requirement for the assignment, another "style-mobile.css" was added to style the website for devices with smaller screen resolutions, especially mobile devices. This required the team to fully understand their own code and alter the CSS for mobile view while maintaining a similar layout and feel of the website. This enhancement helps improve usability of the website as the layout of the website changes according the width of the device, so that the user may view the website in the most comfortable way.
+    </p>
+
+    <p>
+      To achieve this, the team used "media queries" in order to apply styles after a certain "breakpoint", in this the case, the device width of 768px. Using the code "@media only screen and (max-width: 768px)" sets up the CSS file to only apply the styles when the device width is below 768px. The team then proceeded to reuse the selectors from the original "style.css" file and alter the CSS to conform to the device width.
+    </p>
+
+    <p>
+      This enhancement is applied to all pages of the website. In order to view it, resize the window until there is a significant change in layout. Here is the link to the home page: <a class="link-underline" href="index.php">index.php</a>
+    </p>
+
+    <hr/>
+  </article>
+
+
+  <article class="info enhancement__info">
+    <img class="enhancement__long" src="images/enhancement2.jpg" alt="Flex Layout"/>
+
+    <h2 class="text-accent">Grid &amp; Flexbox Layout</h2>
+
+    <p>
+      Aside from using "float" to create a flexible layout, the team also utilized grid and flexbox layouts. These are powerful tools used by modern web designers to create a layout that they have more control over. This enhancement helps to create a "responsive web design", which means that it scales with the size of the device, so that the user may have utmost comfort when viewing the website, regardless of the device.
+    </p>
+
+    <p>
+      To achieve this, the team used "display: grid" or "display: flex" according to their needs. These codes come with extra properties that can be altered, such as "justify-content" or "flex-wrap" for flexbox or "grid-template-columns" for grid. By altering these properties, the team was able to achieve a flexible layout with less effort.
+    </p>
+
+    <p>
+      Here are some sites that utilize the grid layout: <a href="index.php" class="link-underline">index.php</a>, <a href="product1.php" class="link-underline">product1.php</a>, <a class="link-underline" href="enquiry.php">enquiry.php</a>
+    </p>
+
+    <p>
+      Here are some sites and areas that utilize the flexbox layout: Navigation Bar, Footer, <a href="index.php" class="link-underline">index.php</a>, <a href="product1.php" class="link-underline">product1.php</a>, <a href="aboutme1.php" class="link-underline">aboutme1.php</a>
+    </p>
+
+    <hr/>
+  </article>
+
+  <article class="info enhancement__info">
+    <img class="enhancement__long" src="images/enhancement3.jpg" alt="Pseudo Selector"/>
+
+    <h2 class="text-accent">CSS Selectors</h2>
+
+    <p>
+      Apart from the selectors that were specified to be used in the assignment, such as the contextual selector, grouping selector,  etc., the team also used other CSS selectors to style some of the elements in the website.
+    </p>
+
+    <p>
+      Among the selectors used is the pseudo element selector "::before". The team used this selector to create a custom bullet type with the "|" symbol. The team also used the pseudo class selector ":focus" to style the form inputs when they have been clicked on and "focused". This gives feedback to the user which helps improve usability of the website. Lastly, the team used id selectors that target elements with ids that contains a given word. It is written like so, [id*="word"]. Using this, the team was able to style elements that were similar but also slightly different without having to create multiple classes for them.
+    </p>
+
+    <p>
+      Pseudo element selector (::before): Footer, <a href="product3_4.php" class="link-underline">product3_4.php</a>
+    </p>
+
+    <p>
+      Pseudo class selector (:focus): <a href="enquiry.php" class="link-underline">enquiry.php</a>
+    </p>
+
+    <p>
+      id selector: <a href="index.php" class="link-underline">index.php</a>, <a href="product1.php" class="link-underline">product1.php</a>
+    </p>
+
+    <hr/>
+  </article>
+
+  <article class="info enhancement__info">
+    <img class="enhancement__long" src="images/enhancement4.jpg" alt="CSS Animation"/>
+
+    <h2 class="text-accent">CSS Animations</h2>
+
+    <p>
+      In order to improve usability of the website, the team also incorporated CSS animations into the website.
+    </p>
+
+    <p>
+      CSS animations can simply be done by using the pseudo class selector ":hover" to target the desired element, and then applying the desired styles on that element when hovered over. The team also used the "transition" property to "slow down" the animation, as it is more appealing than instantly popping out. The team also made use of this ":hover" selector to create a dropdown menu for the navigation bar.
+    </p>
+
+    <p>
+      CSS animations have been applied to various parts of the website. Here are some examples: Navbar, Footer, <a href="index.php" class="link-underline">index.php</a>, <a href="products1.php" class="link-underline">products1.php</a>
+    </p>
+
+    <hr/>
+  </article>
+
+  <a href="index.php" class="btn is-pos-x-center">Back To Site</a>
+</body>
+</html>

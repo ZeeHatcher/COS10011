@@ -30,6 +30,14 @@
 
     <section>
       <?php
+        function sanitise_input($data) {
+          $data = trim($data);
+          $data = stripslashes($data);
+          $data = htmlspecialchars($data);
+
+          return $data;
+        }
+
         $servername = "localhost";
         $username = "root";
         $password = "";
@@ -41,25 +49,151 @@
           die("Connection failed: " . mysqli_connect_error());
         }
 
-        $fullname = $_POST["fullname"];
-        $email = $_POST["email"];
-        $tele = $_POST["fulltele"];
-        $street_address = $_POST["street_address"];
-        $city = $_POST["city"];
-        $state = $_POST["state"];
-        $postcode = $_POST["postcode"];
-        $product_code = $_POST["product-code"];
-        $subject = $_POST["subject"];
-        $duration = $_POST["duration"];
-        $comments = $_POST["comments"];
+        $err_msg = "";
 
-        $sql = "INSERT INTO enquiry (fullname, email, tele, street_address, city, state, postcode, product_code, subject, duration, comments)
-                VALUES ('$fullname', '$email', '$tele', '$street_address', '$city', '$state', '$postcode', '$product_code', '$subject', '$duration', '$comments')";
+        if (isset($_POST["fullname"])) {
+          $fullname = $_POST["fullname"];
+          $fullname = sanitise_input($fullname);
 
-        if (mysqli_query($conn, $sql)) {
-          echo "New record created successfully";
+          if (strlen($fullname) == 0 && !preg_match("/^[A-Za-z ]+$/", $fullname)) {
+            $err_msg .= "Invalid fullname;<br/>";
+          }
         } else {
-          echo "Error: " . $sql . "<br />" . mysqli_error($conn);
+          $err_msg .= "Empty fullname;<br/>";
+          $fullname = "-";
+        }
+
+        if (isset($_POST["email"])) {
+          $email = $_POST["email"];
+          $email = sanitise_input($email);
+
+          if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $err_msg .= "Invalid email;<br/>";
+          }
+        } else {
+          $err_msg .= "Empty email;<br/>";
+          $email = "-";
+        }
+
+        if (isset($_POST["fulltele"])) {
+          $tele = $_POST["fulltele"];
+          $tele = sanitise_input($tele);
+
+          if (!preg_match("/^[0-9]{3}-[0-9]+$/", $tele)) {
+            $err_msg .= "Invalid telephone number;<br/>";
+          }
+        } else {
+          $err_msg .= "Empty telephone number;<br/>";
+          $tele = "-";
+        }
+
+        if (isset($_POST["street_address"])) {
+          $street_address = $_POST["street_address"];
+          $street_address = sanitise_input($street_address);
+
+          if (strlen($street_address) > 40) {
+            $err_msg .= "Invalid street address;<br/>";
+          }
+        } else {
+          $err_msg .= "Empty street address;<br/>";
+          $street_address = "-";
+        }
+
+        if (isset($_POST["city"])) {
+          $city = $_POST["city"];
+          $city = sanitise_input($city);
+
+          if (strlen($city) > 20) {
+            $err_msg .= "Invalid city;<br/>";
+          }
+        } else {
+          $err_msg .= "Empty city;<br/>";
+          $city = "-";
+        }
+
+        if (isset($_POST["state"])) {
+          $state = $_POST["state"];
+          $state = sanitise_input($state);
+
+          if (strlen($state) == 0) {
+            $err_msg .= "Invalid state;<br/>";
+          }
+        } else {
+          $err_msg .= "Empty state;<br/>";
+          $state = "-";
+        }
+
+        if (isset($_POST["postcode"])) {
+          $postcode = $_POST["postcode"];
+          $postcode = sanitise_input($postcode);
+
+          if (!preg_match("/^[0-9]{5}$/", $postcode)) {
+            $err_msg .= "Invalid postcode;<br/>";
+          }
+        } else {
+          $err_msg .= "Empty postcode;<br/>";
+          $postcode = "-";
+        }
+
+        if (isset($_POST["product-code"])) {
+          $product_code = $_POST["product-code"];
+          $product_code = sanitise_input($product_code);
+
+          if (strlen($product_code) == 0) {
+            $err_msg .= "Invalid product code;<br/>";
+          }
+        } else {
+          $err_msg .= "Empty product code;<br/>";
+          $product_code = "-";
+        }
+
+        if (isset($_POST["subject"])) {
+          $subject = $_POST["subject"];
+          $subject = sanitise_input($subject);
+
+          if (strlen($subject) == 0) {
+            $err_msg .= "Invalid subject;<br/>";
+          }
+        } else {
+          $err_msg .= "Empty subject;<br/>";
+          $subject = "-";
+        }
+
+        if (isset($_POST["duration"])) {
+          $duration = $_POST["duration"];
+          $duration = sanitise_input($duration);
+
+          if (!preg_match("/^[0-9]+$/", $duration)) {
+            $err_msg .= "Invalid duration;<br/>";
+          }
+        } else {
+          $err_msg .= "Empty duration;<br/>";
+          $duration = "-";
+        }
+
+        if (isset($_POST["comments"])) {
+          $comments = $_POST["comments"];
+          $comments = sanitise_input($comments);
+        } else {
+          $comments = "-";
+        }
+
+        if ($err_msg == "") {
+          $sql = "INSERT INTO enquiry (fullname, email, tele, street_address, city, state, postcode, product_code, subject, duration, comments) VALUES ('$fullname', '$email', '$tele', '$street_address', '$city', '$state', '$postcode', '$product_code', '$subject', '$duration', '$comments')";
+
+          if (mysqli_query($conn, $sql)) {
+            echo "<p class='info__text'>New record created successfully</p>";
+            echo "<p class='info__text'>Thank you for your time</p>";
+          } else {
+            echo "Error: " . $sql . "<br />" . mysqli_error($conn);
+          }
+        } else {
+          echo "<article class='info'>";
+          echo "<h3 class='info__subtitle'>Errors:</h3>";
+          echo "<p class='info__text'>";
+          echo $err_msg;
+          echo "</p>";
+          echo "</article>";
         }
 
         mysqli_close($conn);
@@ -67,7 +201,7 @@
     </section>
 
     <section>
-      <table class="modern-table">
+      <table id="summary-table" class="modern-table">
         <tr class="modern-table__row">
           <th class="modern-table__header">Fields</th>
           <th class="modern-table__header">Values</th>

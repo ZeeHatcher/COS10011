@@ -1030,6 +1030,11 @@ main.student {
   background-color: #111;
 }
 
+#summary-table {
+  width: 50%;
+  margin: auto;
+}
+
 .student {
   width: 80%;
   margin: 50px auto 0;

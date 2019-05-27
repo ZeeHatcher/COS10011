@@ -39,5 +39,10 @@
           <h3 class="navbar__link--on-hover">Rent</h3>
         </a>
       </li>
+      <li class="navbar__link">
+        <a href="register.php">
+          <h3 class="navbar__link--on-hover">Login</h3>
+        </a>
+      </li>
     </ul>
   </nav>

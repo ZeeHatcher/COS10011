@@ -30,6 +30,8 @@
 
     <section>
       <?php
+        require("create_db.php");
+
         function sanitise_input($data) {
           $data = trim($data);
           $data = stripslashes($data);
@@ -38,23 +40,10 @@
           return $data;
         }
 
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "db_glacier";
+        create_db();
+        create_db_enquiry();
 
-        $conn = @mysqli_connect($servername, $username, $password, $dbname);
-
-        if (!$conn) {
-          $conn_server = mysqli_connect($servername, $username, $password);
-          $sql_createdb = "CREATE DATABASE db_glacier";
-          
-          if (!mysqli_query($conn_server, $sql_createdb)) {
-            echo "Error creating database: " . mysqli_error($conn);
-          }
-          
-          $conn = mysqli_connect($servername, $username, $password, $dbname);
-        }
+        $conn = @mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DBNAME);
 
         $err_msg = "";
 
@@ -191,27 +180,6 @@
           if (mysqli_query($conn, $sql)) {
             echo "<p class='info__text'>New record created successfully</p>";
             echo "<p class='info__text'>Thank you for your time</p>";
-          } else {
-            $sql_createtable = "CREATE TABLE enquiry (
-            id INT(8) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-            fullname VARCHAR(64) NOT NULL,
-            email VARCHAR(128) NOT NULL,
-            tele VARCHAR(11) NOT NULL,
-            street_address VARCHAR(256) NOT NULL,
-            city VARCHAR(64) NOT NULL
-            state VARCHAR(64) NOT NULL,
-            postcode VARCHAR(5) NOT NULL,
-            product_code VARCHAR(64) NOT NULL,
-            subject VARCHAR(256) NOT NULL,
-            duration INT(8) NOT NULL,
-            comments,
-            )";
-            
-            if (!mysqli_query($conn, $sql_createtable)) {
-              echo "Error creating table: " . mysqli_error($conn);
-            }
-            
-            mysqli_query($conn, $sql)
           }
         } else {
           echo "<article class='info'>";

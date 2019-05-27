@@ -44,49 +44,48 @@
           </tr>
 
           <?php
+            require("create_db.php");
 
-          function create_item($item) {
-            echo "<td class='modern-table__item'>";
-            echo $item;
-            echo "</td>";
-          }
+            function create_item($item) {
+              echo "<td class='modern-table__item'>";
+              echo $item;
+              echo "</td>";
+            }
 
-          $servername = "localhost";
-          $username = "root";
-          $password = "";
-          $dbname = "db_glacier";
+            create_db();
+            create_db_enquiry();
 
-          $conn = mysqli_connect($servername, $username, $password, $dbname);
+            $conn = mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DBNAME);
 
-          if (!$conn) {
-            die("Connection failed: " . mysqli_connect_error());
-          }
+            if (!$conn) {
+              die("Connection failed: " . mysqli_connect_error());
+            }
 
-          $sql = "SELECT * FROM enquiry";
-          $enquiry_data = mysqli_query($conn, $sql);
+            $sql = "SELECT * FROM enquiry";
+            $enquiry_data = mysqli_query($conn, $sql);
 
-          if (!$enquiry_data) {
-            die("Could not get data: " . mysql_error());
-          }
+            if (!$enquiry_data) {
+              die("Could not get data: " . mysql_error());
+            }
 
-          while ($row = mysqli_fetch_assoc($enquiry_data)) {
-            echo "<tr class='modern-table__row'>";
-            create_item($row["id"]);
-            create_item($row["fullname"]);
-            create_item($row["email"]);
-            create_item($row["tele"]);
+            while ($row = mysqli_fetch_assoc($enquiry_data)) {
+              echo "<tr class='modern-table__row'>";
+              create_item($row["id"]);
+              create_item($row["fullname"]);
+              create_item($row["email"]);
+              create_item($row["tele"]);
 
-            $full_address = $row["street_address"] . ", " . $row["city"] . ", " . $row["state"] . " " . $row["postcode"];
-            create_item($full_address);
+              $full_address = $row["street_address"] . ", " . $row["city"] . ", " . $row["state"] . " " . $row["postcode"];
+              create_item($full_address);
 
-            create_item($row["product_code"]);
-            create_item($row["subject"]);
-            create_item($row["duration"]);
-            create_item($row["comments"]);
-            echo "</tr>";
-          }
+              create_item($row["product_code"]);
+              create_item($row["subject"]);
+              create_item($row["duration"]);
+              create_item($row["comments"]);
+              echo "</tr>";
+            }
 
-          mysqli_close($conn);
+            mysqli_close($conn);
           ?>
         </table>
       </div>

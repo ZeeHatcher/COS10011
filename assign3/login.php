@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>G L A C I E R | Register</title>
+  <title>G L A C I E R | Login</title>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" />
@@ -38,80 +38,56 @@
     $err_msg = "";
     $valid = true;
 
-    if (isset($_POST["submit"])) {
+    if (isset($_POST["login"])) {
       if (isset($_POST["username"]) && !empty($_POST["username"])) {
         $username = $_POST["username"];
         $username = sanitise_input($username);
-
-        if (!preg_match("/^[A-Za-z0-9]+$/", $username)) {
-          $err_msg .= "Invalid username<br/>";
-          $valid = false;
-        }
-
-        $conn = @mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DBNAME);
-
-        $sql = "SELECT username FROM users";
-        $result = mysqli_query($conn, $sql);
-
-        if (mysqli_num_rows($result) > 0) {
-          while ($row = mysqli_fetch_assoc($result)) {
-            if ($username == $row["username"]) {
-              $err_msg .= "Username already exists<br/>";
-              $valid = false;
-
-              break;
-            }
-          }
-        }
-
-        mysqli_close($conn);
       } else {
-        $err_msg .= "Empty username<br/>";
+        $err_msg .= "Please enter a username<br/>";
         $valid = false;
       }
 
       if (isset($_POST["password"]) && !empty($_POST["password"])) {
         $password = $_POST["password"];
         $password = sanitise_input($password);
-
-        if (isset($_POST["confirm"]) && !empty($_POST["confirm"])) {
-          $confirm = $_POST["confirm"];
-          $confirm = sanitise_input($confirm);
-
-          if (!($confirm == $password)) {
-            $err_msg .= "Incorrect confirm password<br/>";
-            $valid = false;
-          }
-        } else {
-          $err_msg .= "Empty confirm password<br/>";
-          $valid = false;
-        }
       } else {
-        $err_msg .= "Empty password<br/>";
+        $err_msg .= "Please enter a password<br/>";
         $valid = false;
       }
 
       if ($valid) {
         $conn = @mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DBNAME);
 
-        $password = password_hash($password, PASSWORD_DEFAULT);
+        $sql = "SELECT username, password FROM users";
+        $results = mysqli_query($conn, $sql);
 
-        $sql = "INSERT INTO users (username, password, privilege)
-        VALUES ('$username', '$password', 0)";
-        mysqli_query($conn, $sql);
+        while ($row = mysqli_fetch_assoc($results)) {
+          if ($username == $row["username"] && password_verify($password, $row["password"])) {
+            session_start();
+            $_SESSION["logged_in"] = true;
+            $_SESSION["username"] = $username;
+
+            break;
+          }
+        }
+
         mysqli_close($conn);
 
-        header("location: login.php");
+        if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true) {
+          header("location: index.php");
+        } else {
+          $err_msg .= "Invalid username or password<br/>";
+        }
       }
-    } else if (isset($_POST["cancel"])) {
-      header("location: login.php");
+    } else if (isset($_POST["register"])) {
+      header("location: register.php");
     }
   ?>
 
   <main>
     <section>
       <div class="seperator">
-        <h1 class="seperator__title">Registe<span class="no-letter-spacing">r</span></h1>
+        <h1 class="seperator__title">Logi<span class="no-letter-spacing">n</span></h1>
       </div>
     </section>
 
@@ -124,9 +100,6 @@
 
             <label for="password">Password: </label>
             <input type="text" name="password">
-
-            <label for="confirm">Confirm Password: </label>
-            <input type="text" name="confirm">
           </div>
         </fieldset>
 
@@ -139,8 +112,8 @@
         ?>
 
         <div class="form__btns">
-          <input class="btn form__btn" type="submit" name="cancel" value="Cancel">
-          <input class="btn form__btn" type="submit" name="submit" value="Submit">
+          <input class="btn form__btn" type="submit" name="register" value="Register">
+          <input class="btn form__btn" type="submit" name="login" value="Login">
         </div>
       </form>
     </section>

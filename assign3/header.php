@@ -40,7 +40,7 @@
         </a>
       </li>
       <li class="navbar__link">
-        <a href="register.php">
+        <a href="login.php">
           <h3 class="navbar__link--on-hover">Login</h3>
         </a>
       </li>

@@ -66,13 +66,18 @@
 
         mysqli_close($conn);
       } else {
-        $err_msg .= "Empty username<br/>";
+        $err_msg .= "Please enter a username<br/>";
         $valid = false;
       }
 
       if (isset($_POST["password"]) && !empty($_POST["password"])) {
         $password = $_POST["password"];
         $password = sanitise_input($password);
+
+        if (strlen($password) < 5) {
+          $err_msg .= "Password too short (Min. 5 letters)<br>";
+          $valid = false;
+        }
 
         if (isset($_POST["confirm"]) && !empty($_POST["confirm"])) {
           $confirm = $_POST["confirm"];
@@ -83,11 +88,11 @@
             $valid = false;
           }
         } else {
-          $err_msg .= "Empty confirm password<br/>";
+          $err_msg .= "Please confirm your password<br/>";
           $valid = false;
         }
       } else {
-        $err_msg .= "Empty password<br/>";
+        $err_msg .= "Please enter a password<br/>";
         $valid = false;
       }
 
@@ -123,10 +128,10 @@
             <input type="text" name="username" />
 
             <label for="password">Password: </label>
-            <input type="text" name="password">
+            <input type="password" name="password">
 
             <label for="confirm">Confirm Password: </label>
-            <input type="text" name="confirm">
+            <input type="password" name="confirm">
           </div>
         </fieldset>
 
@@ -139,8 +144,8 @@
         ?>
 
         <div class="form__btns">
-          <input class="btn form__btn" type="submit" name="cancel" value="Cancel">
           <input class="btn form__btn" type="submit" name="submit" value="Submit">
+          <input class="btn form__btn" type="submit" name="cancel" value="Cancel">
         </div>
       </form>
     </section>

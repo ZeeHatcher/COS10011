@@ -77,6 +77,11 @@
       $result = mysqli_query($conn, $sql);
     }
 
+    $password = password_hash("master", PASSWORD_DEFAULT);
+    $sql = "INSERT INTO users (username, password, privilege) VALUES ('master', '$password', '1')";
+
+    mysqli_query($conn, $sql);
+
     mysqli_close($conn);
   }
 ?>

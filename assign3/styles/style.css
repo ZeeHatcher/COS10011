@@ -587,9 +587,24 @@ input:focus, textarea:focus {
   transition: 0.2s;
 }
 
+.btn__delete {
+  color: #c92020;
+  border-color: #c92020;
+}
+
+
+.btn__manage {
+  text-align: center;
+}
+
 .btn:hover {
   background-color: #fff;
   color: #111;
+}
+
+.btn__delete:hover {
+  background-color: #c92020;
+  color: #fff;
 }
 
 .bullet::before {
@@ -607,6 +622,16 @@ input:focus, textarea:focus {
   text-align: center;
   transition: 0.2s;
   margin: 25px;
+}
+
+#current_user {
+  color: #fff;
+  opacity: 0.4;
+  cursor: default;
+}
+
+#current_user:hover {
+  color: #fff;
 }
 
 .items .card {
@@ -873,6 +898,11 @@ input[readonly="readonly"]:focus, textarea[readonly="readonly"]:focus {
   border: none;
 }
 
+.input-edit {
+  width: 100%;
+  text-align: center;
+}
+
 main.student {
   margin-bottom: 100px;
 }
@@ -902,6 +932,11 @@ main.student {
 
 .modern-table__header:first-child, .modern-table__item:first-child {
   border-right: 5px solid #111;
+}
+
+#view-table .modern-table__item {
+  text-align: center;
+  vertical-align: middle;
 }
 
 .enhancement__info p {
@@ -1077,6 +1112,10 @@ main.student {
   margin: auto;
   overflow-x: scroll;
   scrollbar-color: #b6e2ff #1c1c1c;
+}
+
+#view-table {
+  min-width: 100%;
 }
 
 #view-table .modern-table__header {

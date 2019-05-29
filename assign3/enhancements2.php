@@ -19,6 +19,7 @@
     Enhancements<span class="no-letter-spacing">2</span>
 
     <a href="enhancements.php" class="enhancement__btn enhancement__btn--left is-pos-y-center">&#60;</a>
+    <a href="phpenhancements.php" class="enhancement__btn enhancement__btn--right is-pos-y-center">&#62;</a>
   </h1>
 
   <article class="info enhancement__info">

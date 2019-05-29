@@ -58,14 +58,15 @@
       if ($valid) {
         $conn = @mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DBNAME);
 
-        $sql = "SELECT username, password FROM users";
+        $sql = "SELECT username, password, privilege FROM users";
         $results = mysqli_query($conn, $sql);
 
         while ($row = mysqli_fetch_assoc($results)) {
           if ($username == $row["username"] && password_verify($password, $row["password"])) {
             session_start();
             $_SESSION["logged_in"] = true;
-            $_SESSION["username"] = $username;
+            $_SESSION["username"] = $row["username"];
+            $_SESSION["privilege"] = $row["privilege"];
 
             break;
           }
@@ -99,7 +100,7 @@
             <input type="text" name="username" />
 
             <label for="password">Password: </label>
-            <input type="text" name="password">
+            <input type="password" name="password">
           </div>
         </fieldset>
 
@@ -112,8 +113,8 @@
         ?>
 
         <div class="form__btns">
-          <input class="btn form__btn" type="submit" name="register" value="Register">
           <input class="btn form__btn" type="submit" name="login" value="Login">
+          <input class="btn form__btn" type="submit" name="register" value="Register">
         </div>
       </form>
     </section>

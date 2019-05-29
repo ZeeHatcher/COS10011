@@ -229,7 +229,7 @@ if (sPage == "enquiry.php") {
     sessionStorage.clear();
     window.location = "enquiry.php";
   });
-} else {
+} else if (sPage.match(/^(product)[0-9]_[0-9](\.php)$/g)) {
   // Send product code and name from product*_*.html to enquiry.html
   var btnRent = document.getElementById("product-btn");
 

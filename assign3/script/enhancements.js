@@ -2,7 +2,7 @@
 var btn = document.getElementById("nav-btn");
 var nav = document.getElementById("nav");
 
-var arrayCategories = ["Snowboards", "Skis", "Camping"]
+var arrayCategories = ["Snowboards", "Skis", "Camping"];
 
 function create_dropdown(p) {
   var parent = document.getElementsByClassName(p)[0];

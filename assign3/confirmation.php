@@ -27,7 +27,7 @@
         <h1 class="seperator__title">Confir<span class="no-letter-spacing">m</span></h1>
       </div>
 
-      <form name="confirm-rent" action="#">
+      <form name="confirm-rent" action="enquiry_process.php" method="post">
         <fieldset>
           <legend>
             Persona<span class="no-letter-spacing">l</span>

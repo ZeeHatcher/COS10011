@@ -271,7 +271,6 @@ body {
   color: #fff;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  /* min-height: 100vh; */
   position: relative;
   padding-bottom: 1px;
 }
@@ -1030,6 +1029,11 @@ main.student {
   background-color: #111;
 }
 
+#summary-table {
+  width: 50%;
+  margin: auto;
+}
+
 .student {
   width: 80%;
   margin: 50px auto 0;
@@ -1066,4 +1070,15 @@ main.student {
 
 .studentnav__item--active, .studentnav__item--active:hover {
   border-bottom: solid 2px #b6e2ff;
+}
+
+.scroll {
+  width: 80%;
+  margin: auto;
+  overflow-x: scroll;
+  scrollbar-color: #b6e2ff #1c1c1c;
+}
+
+#view-table .modern-table__header {
+  font-size: 12px;
 }
